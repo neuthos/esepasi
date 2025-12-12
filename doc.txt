@@ -1,0 +1,56 @@
+School Payment
+Functional Requirements
+Website Menus
+admin sekolah bisa melakukan register pada sekolah dengan email dan password
+•
+admin sekolah pada saat pertama kali register harus melengkapi identitas sekolah
+•
+admin sekolah dapat melakukan upload tagihan spp bulan dengan required filed NIS, Nama siswa, bulan,
+tagihan, jatuh tempo
+•
+admin sekolah dapat melakukan upload tagina dengan nominal khusus / non spp dengan field
+•
+NIS, Siswa, Nominal Tagihan, Keterangan, Tanggal, Jatuh tempo
+admin sekolah dapat melihat riwayat pemabayaran dan tagihan mana saja yang sudah terbayar dan
+belum terbayar
+•
+admin sekolah bisa melihat tagihan mana yangbelum bayar tapi sudah lewat jatuh tempo
+•
+admin sekolah bisa melihat ringkasan total tagihan sudah terbayar dan total tagihan belum terbayar •
+admin sekolah bisa melihat list tagihan per NIS ( nomor induk siswa ) •
+•
+Terdapat API untuk inquiry berdasarkan NIS dengan menghasilkan info list tagihan dan total tagihan
+Terdapat API untuk melakukan pembayaran dengan tujuan untuk melakukan nominal pembayaran (
+buatkan parameter metode pembayaran )
+•
+•
+tiap pembayaran yang terjadi harus dapat di lihat detail nya
+•
+Dashboard
+•
+Summary tagihan
+•
+Tagihan
+•
+List dan Pencarian
+•
+Detail tagihan
+•
+Upload tagihan
+export •
+void / cancle tagihan
+•
+•
+Transaction
+•
+List transaction dan pencarian
+•
+detail transaction
+export •
+•
+Siswa
+•
+List daftar siswa dengan nominal tagihan belum di bayar dan sudah di baya
+•
+detail siswa beserta history
+export data per siswa dan all siswa •

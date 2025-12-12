@@ -1,0 +1,215 @@
+# Project AI Coding Guidelines
+
+## Project Context
+
+MVP-focused project prioritizing speed, maintainability, and clean code. Target users are older adults requiring clarity-first UX design.
+
+## Tech Stack
+
+- **UI Framework**: Ant Design (antd)
+- **Styling**: Tailwind CSS (utility classes for spacing, layout adjustments only)
+- **Language**: TypeScript (strict mode)
+
+## Code Principles
+
+### 0. Documentation First (CRITICAL)
+
+- **ALWAYS** check `API_DOCS.md` and `db.dbml` before writing any code or answering questions about implementation.
+- `API_DOCS.md` is the source of truth for API endpoints, payloads, and response structures.
+- `db.dbml` is the source of truth for the database schema and relationships.
+- If user specifications conflict with `API_DOCS.md` or `db.dbml`, clarify with the user before proceeding.
+
+### 1. Minimal & DRY
+
+- Write the least amount of code that solves the problem
+- Extract reusable logic into custom hooks (`use*.ts`)
+- Extract reusable UI patterns into components only when used 3+ times
+- Prefer composition over abstraction
+- No premature optimization
+
+### 2. File Structure
+
+```
+src/
+  components/     # Shared UI components
+  features/       # Feature-based modules (components + hooks + types)
+  hooks/          # Shared custom hooks
+  utils/          # Pure utility functions
+  types/          # Shared TypeScript types
+```
+
+### 3. Component Guidelines
+
+- One component per file
+- Props interface defined above component
+- Destructure props in function signature
+- Use Ant Design components as primary building blocks
+- Tailwind only for: spacing (`p-*`, `m-*`, `gap-*`), flex/grid layout, responsive adjustments
+
+```tsx
+interface UserCardProps {
+  name: string;
+  email: string;
+  onEdit: () => void;
+}
+
+export function UserCard({name, email, onEdit}: UserCardProps) {
+  return (
+    <Card className="mb-4">
+      <Typography.Title level={4}>{name}</Typography.Title>
+      <Typography.Text>{email}</Typography.Text>
+      <Button onClick={onEdit}>Edit</Button>
+    </Card>
+  );
+}
+```
+
+### 4. State Management
+
+- Local state: `useState` for simple, `useReducer` for complex
+- Server state: React Query / SWR
+- No global state unless absolutely necessary
+- Lift state only when needed
+
+### 5. TypeScript
+
+- Strict mode enabled
+- No `any` type
+- Prefer `interface` over `type` for objects
+- Use discriminated unions for complex states
+
+## UI/UX: Clarity First Design
+
+Target audience: older adults. Every design decision must prioritize readability and ease of use.
+
+### Visual Hierarchy
+
+- **Font sizes**: Minimum 16px body, 14px secondary text
+- **Line height**: Minimum 1.5
+- **Contrast**: WCAG AA compliance minimum (4.5:1 for text)
+- **Spacing**: Generous whitespace, minimum 16px between interactive elements
+
+### Interactive Elements
+
+- **Button sizes**: Use `size="large"` as default
+- **Click targets**: Minimum 44x44px touch area
+- **Hover/Focus states**: Clearly visible, high contrast
+- **Loading states**: Always show feedback, use Spin or Skeleton
+
+### Forms
+
+- **Labels**: Always visible, above input (no floating labels)
+- **Input sizes**: Use `size="large"` as default
+- **Error messages**: Inline, red text below field, clear language
+- **Help text**: Show before user makes mistakes
+- **Validation**: On blur, not on every keystroke
+
+```tsx
+<Form.Item
+  label="Email Address"
+  name="email"
+  rules={[
+    {required: true, type: "email", message: "Please enter a valid email"},
+  ]}
+  help="We will send confirmation to this email"
+>
+  <Input size="large" placeholder="example@email.com" />
+</Form.Item>
+```
+
+### Navigation & Actions
+
+- **Primary action**: One clear primary button per screen
+- **Destructive actions**: Require confirmation, use red color
+- **Back/Cancel**: Always provide exit path
+- **Progress**: Show steps for multi-page flows
+
+### Feedback & Communication
+
+- **Success/Error**: Use Alert or Message component, clear language
+- **Empty states**: Helpful message + action suggestion
+- **Loading**: Skeleton for content, Spin for actions
+
+### Ant Design Defaults
+
+```tsx
+// ConfigProvider at app root
+<ConfigProvider
+  theme={{
+    token: {
+      fontSize: 16,
+      borderRadius: 8,
+    },
+    components: {
+      Button: {controlHeight: 44},
+      Input: {controlHeight: 44},
+      Select: {controlHeight: 44},
+    },
+  }}
+>
+  {children}
+</ConfigProvider>
+```
+
+## Code Patterns
+
+### API Calls
+
+```tsx
+async function fetchUser(id: string): Promise<User> {
+  const response = await api.get(`/users/${id}`);
+  return response.data;
+}
+
+function useUser(id: string) {
+  return useQuery(["user", id], () => fetchUser(id));
+}
+```
+
+### Event Handlers
+
+```tsx
+const handleSubmit = async (values: FormValues) => {
+  try {
+    await createUser(values);
+    message.success("User created successfully");
+  } catch {
+    message.error("Failed to create user. Please try again.");
+  }
+};
+```
+
+### Conditional Rendering
+
+```tsx
+{
+  isLoading && <Skeleton active />;
+}
+{
+  error && <Alert type="error" message="Failed to load data" />;
+}
+{
+  data && <UserList users={data} />;
+}
+```
+
+## Do NOT
+
+- Add comments unless logic is non-obvious
+- Create abstractions for single-use code
+- Use Tailwind for colors, typography, or component styling (use Ant Design)
+- Use placeholder text as labels
+- Use icon-only buttons without tooltips
+- Use small text (< 14px) for important information
+- Nest ternary operators
+- Create files with < 20 lines of meaningful code (consolidate)
+
+## Do
+
+- Use Ant Design components for all UI elements
+- Use Tailwind for layout and spacing adjustments
+- Keep components under 150 lines
+- Name functions and variables descriptively
+- Handle loading, error, and empty states
+- Test interactive flows with keyboard navigation
+- Provide immediate visual feedback for all actions

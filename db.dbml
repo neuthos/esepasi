@@ -1,0 +1,110 @@
+// School Payment System ERD
+// Naming: snake_case
+// ID: uuid
+
+Table schools {
+  id uuid [pk]
+  name varchar(255) [not null]
+  code varchar(50) [not null]
+  address text
+  logo_url varchar(500)
+  created_at timestamp [not null, default: `now()`]
+  updated_at timestamp [not null, default: `now()`]
+
+  indexes {
+    code [unique]
+  }
+  
+  Note: 'Identitas sekolah yang dilengkapi admin saat pertama register'
+}
+
+Table users {
+  id uuid [pk]
+  school_id uuid [not null]
+  email varchar(255) [not null]
+  password_hash varchar(255) [not null]
+  name varchar(255) [not null]
+  is_active boolean [not null, default: true]
+  is_super_admin boolean [not null, default: false]
+  created_at timestamp [not null, default: `now()`]
+  updated_at timestamp [not null, default: `now()`]
+  
+  indexes {
+    email [unique]
+  }
+  
+  Note: 'Admin sekolah yang melakukan register dengan email & password'
+}
+
+Table students {
+  id uuid [pk]
+  school_id uuid [not null]
+  nis varchar(50) [not null]
+  name varchar(255) [not null]
+  is_active boolean [not null, default: true]
+  created_at timestamp [not null, default: `now()`]
+  updated_at timestamp [not null, default: `now()`]
+  
+  indexes {
+    (school_id, nis) [unique, name: 'uq_school_nis']
+  }
+  
+  Note: 'Data siswa dengan NIS unik per sekolah'
+}
+
+Table bills {
+  id uuid [pk]
+  school_id uuid [not null]
+  student_id uuid [not null]
+  code varchar(50) [not null, note: 'code reference']
+  bill_type varchar(20) [not null, note: 'spp | non_spp']
+  amount decimal(15,2) [not null]
+  paid_amount decimal(15,2) [not null, default: 0]
+  description text [note: 'Keterangan untuk non-SPP']
+  billing_period varchar(7) [note: 'YYYY-MM format untuk SPP']
+  bill_date date [not null]
+  due_date date [not null]
+  status varchar(20) [not null, default: 'pending', note: 'pending | paid | cancelled']
+  cancelled_at timestamp
+  cancelled_by uuid
+  created_by uuid [not null]
+  created_at timestamp [not null, default: `now()`]
+  updated_at timestamp [not null, default: `now()`]
+  
+  indexes {
+    (school_id, student_id) [name: 'idx_bills_school_student']
+    status [name: 'idx_bills_status']
+    due_date [name: 'idx_bills_due_date']
+    code [unique]
+  }
+  
+  Note: 'Tagihan SPP bulanan dan non-SPP (nominal khusus)'
+}
+
+Table payments {
+  id uuid [pk]
+  bill_id uuid [not null]
+  amount decimal(15,2) [not null]
+  payment_method varchar(50) [not null, note: 'cash | transfer | va | qris | etc']
+  payment_date timestamp [not null]
+  payment_reference_number varchar(100) [note: 'Nomor referensi dari payment gateway/bank']
+  notes text
+  created_at timestamp [not null, default: `now()`]
+  
+  indexes {
+    bill_id [name: 'idx_payments_bill']
+    payment_date [name: 'idx_payments_date']
+    payment_reference_number [name: 'idx_payments_reference']
+  }
+  
+  Note: 'Detail pembayaran untuk setiap tagihan'
+}
+
+// Relationships
+Ref: users.school_id > schools.id [delete: cascade]
+Ref: students.school_id > schools.id [delete: cascade]
+Ref: bills.school_id > schools.id [delete: cascade]
+Ref: bills.student_id > students.id [delete: cascade]
+Ref: bills.created_by > users.id
+Ref: bills.cancelled_by > users.id
+Ref: payments.bill_id > bills.id [delete: cascade]
