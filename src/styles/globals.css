@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #0f172a; /* Slate 900 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #141414; /* True Dark Gray */
+    --foreground: #fafafa; /* Almost White */
+  }
 }
 
 .dark {

@@ -3,14 +3,27 @@ import Head from "next/head";
 import {Form, Input, Button, Card, Typography, message} from "antd";
 import {LockOutlined, MailOutlined} from "@ant-design/icons";
 import Link from "next/link";
+import {useRouter} from "next/router";
 import {useMutation} from "@tanstack/react-query";
 import {authService} from "@/services/auth.service";
 import {useAuth} from "@/context/AuthContext";
+import {useEffect} from "react";
 
 const {Title, Text} = Typography;
 
 export default function LoginPage() {
-  const {login} = useAuth();
+  const router = useRouter();
+  const {login, isAuthenticated, user, loading} = useAuth();
+
+  useEffect(() => {
+    if (!loading && isAuthenticated && user) {
+      if (user.school_id) {
+        router.push("/dashboard");
+      } else {
+        router.push("/auth/register?step=1");
+      }
+    }
+  }, [isAuthenticated, user, router, loading]);
 
   const loginMutation = useMutation({
     mutationFn: (values: any) =>

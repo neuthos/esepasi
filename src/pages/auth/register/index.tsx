@@ -12,14 +12,21 @@ import Link from "next/link";
 import {useRouter} from "next/router";
 import {useMutation} from "@tanstack/react-query";
 import {authService} from "@/services/auth.service";
+import {useAuth} from "@/context/AuthContext";
 import {useState, useEffect} from "react";
 
 const {Title, Text} = Typography;
 
 export default function RegisterPage() {
   const router = useRouter();
+  const {isAuthenticated, user, loading} = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
-  const [userData, setUserData] = useState<any>(null);
+
+  useEffect(() => {
+    if (!loading && isAuthenticated && user?.school_id) {
+      router.push("/dashboard");
+    }
+  }, [isAuthenticated, user, loading, router]);
 
   useEffect(() => {
     if (router.isReady && router.query.step) {
@@ -37,10 +44,8 @@ export default function RegisterPage() {
     onSuccess: (data) => {
       message.success("Akun berhasil dibuat! Silakan lengkapi data sekolah.");
       localStorage.setItem("token", data.token);
-      setUserData(data);
       setCurrentStep(1);
     },
-    // onError: (error) => console.log({error}),
   });
 
   // Step 2: Register School

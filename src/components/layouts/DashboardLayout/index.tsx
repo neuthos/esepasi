@@ -1,22 +1,10 @@
 import React, {useState} from "react";
-import {
-  Layout,
-  Menu,
-  Button,
-  theme,
-  Input,
-  Dropdown,
-  Avatar,
-  Space,
-} from "antd";
+import {Layout, Menu, Button, theme, Dropdown, Avatar, Space} from "antd";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
-  SearchOutlined,
   MoonOutlined,
   SunOutlined,
-  BellOutlined,
-  AppstoreOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 import {useRouter} from "next/router";
@@ -40,21 +28,18 @@ export default function DashboardLayout({children}: DashboardLayoutProps) {
   const router = useRouter();
   const {logout, user} = useAuth();
 
-  // Handle Menu Click
   const handleMenuClick = ({key}: {key: string}) => {
     if (key === "logout") {
       logout();
       return;
     }
+
     router.push(key);
   };
 
-  // User Dropdown
   const userMenu = {
     items: [
-      {key: "profile", label: "Profile"},
-      {key: "settings", label: "Settings"},
-      {type: "divider" as const},
+      // {type: "divider" as const},
       {key: "logout", label: "Logout", danger: true},
     ],
     onClick: handleMenuClick,
@@ -69,7 +54,6 @@ export default function DashboardLayout({children}: DashboardLayoutProps) {
           collapsed={collapsed}
           theme={mode}
           width={250}
-          // Override AntD default dark sider bg
           style={{
             overflow: "auto",
             height: "100vh",
@@ -84,8 +68,7 @@ export default function DashboardLayout({children}: DashboardLayoutProps) {
           className={mode === "light" ? "shadow-md" : ""}
         >
           <div className="flex items-center justify-center p-4 gap-2 h-16">
-            {/* Placeholder Logo */}
-            <div className="w-8 h-8  rounded-lg flex items-center justify-center text-white font-bold">
+            <div className="w-8 h-8  rounded-lg flex items-center justify-center bg-blue-500 text-white font-bold">
               E
             </div>
             {!collapsed && (
@@ -103,6 +86,25 @@ export default function DashboardLayout({children}: DashboardLayoutProps) {
             theme={mode}
             mode="inline"
             defaultSelectedKeys={[router.pathname]}
+            defaultOpenKeys={
+              MENU_ITEMS.find(
+                (item) =>
+                  item &&
+                  "children" in item &&
+                  item.children?.some((child) => child?.key === router.pathname)
+              )?.key
+                ? [
+                    MENU_ITEMS.find(
+                      (item) =>
+                        item &&
+                        "children" in item &&
+                        item.children?.some(
+                          (child) => child?.key === router.pathname
+                        )
+                    )?.key as string,
+                  ]
+                : []
+            }
             items={MENU_ITEMS}
             onClick={handleMenuClick}
             className="border-none"
@@ -135,18 +137,10 @@ export default function DashboardLayout({children}: DashboardLayoutProps) {
                 onClick={() => setCollapsed(!collapsed)}
                 style={{fontSize: "16px", width: 44, height: 44}}
               />
-              <Input
-                prefix={<SearchOutlined className="text-gray-400" />}
-                placeholder="Search..."
-                className="w-64 hidden md:flex"
-                variant="filled"
-              />
             </div>
 
             {/* Right Section: Actions & Profile */}
             <div className="flex items-center gap-2">
-              <Button type="text" icon={<AppstoreOutlined />} size="large" />
-              <Button type="text" icon={<BellOutlined />} size="large" />
               <Button
                 type="text"
                 icon={mode === "dark" ? <SunOutlined /> : <MoonOutlined />}
