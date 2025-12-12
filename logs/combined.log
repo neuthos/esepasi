@@ -791,3 +791,282 @@
 [2025-12-13 07:08:54.907] [INFO] [7007c1d8-b445-474c-b519-460e36ff6439] Response: 304 (22ms)
 [2025-12-13 07:10:30.943] [INFO] [5e684e8b-ff17-4af9-a775-6dc48d729d9f] ====== GET /api/v1/auth/me ======
 [2025-12-13 07:10:30.965] [INFO] [5e684e8b-ff17-4af9-a775-6dc48d729d9f] Response: 304 (22ms)
+[2025-12-13 07:21:59.889] [INFO] [0b20ff58-ec34-4b70-ae0f-612a46a27418] ====== GET /api/v1/school ======
+[2025-12-13 07:21:59.899] [INFO] [0b20ff58-ec34-4b70-ae0f-612a46a27418] Response: 200 (11ms)
+[2025-12-13 07:22:00.354] [INFO] [a6a55d6a-0657-4ea7-8403-b9d41c204719] ====== GET /api/v1/school ======
+[2025-12-13 07:22:00.363] [INFO] [a6a55d6a-0657-4ea7-8403-b9d41c204719] Response: 304 (9ms)
+[2025-12-13 07:22:21.081] [INFO] [160ef717-9c20-413d-9d4a-7db38709da69] ====== GET /api/v1/school ======
+[2025-12-13 07:22:21.104] [INFO] [160ef717-9c20-413d-9d4a-7db38709da69] Response: 304 (22ms)
+[2025-12-13 07:31:34.515] [INFO] [6233da9c-5bd8-4d68-9054-69a547330889] ====== GET /api/v1/school ======
+[2025-12-13 07:31:34.539] [INFO] [6233da9c-5bd8-4d68-9054-69a547330889] Response: 304 (25ms)
+[2025-12-13 07:34:57.151] [INFO] [8394b0f1-6ca7-4651-91c2-deed70008710] ====== GET /api/v1/school ======
+[2025-12-13 07:34:57.167] [INFO] [922b0d71-4087-4a1a-977d-c4f82c06326e] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:34:57.205] [INFO] [922b0d71-4087-4a1a-977d-c4f82c06326e] Response: 304 (39ms)
+[2025-12-13 07:34:57.218] [INFO] [8394b0f1-6ca7-4651-91c2-deed70008710] Response: 304 (67ms)
+[2025-12-13 07:35:20.318] [INFO] [b20a5bf9-0440-47ad-8442-fb3dbeda0bb2] ====== PUT /api/v1/school ======
+[2025-12-13 07:35:20.325] [ERROR] [b20a5bf9-0440-47ad-8442-fb3dbeda0bb2] Error: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$modules$2f$school$2f$school$2e$service$2e$ts__$5b$api$5d$__$28$ecmascript$29$__.schoolService.updateSchool is not a function
+[2025-12-13 07:35:20.326] [ERROR] [b20a5bf9-0440-47ad-8442-fb3dbeda0bb2] TypeError: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$modules$2f$school$2f$school$2e$service$2e$ts__$5b$api$5d$__$28$ecmascript$29$__.schoolService.updateSchool is not a function
+    at /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:560:167
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__02b7a7db._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_3a29631a._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 07:35:20.327] [INFO] [b20a5bf9-0440-47ad-8442-fb3dbeda0bb2] Response: 500 (7ms)
+[2025-12-13 07:35:32.764] [INFO] [cd5162e4-2b02-4af9-bc1c-4cda40a1f54a] ====== GET /api/v1/school ======
+[2025-12-13 07:35:32.770] [INFO] [8ebbd0b0-cd3d-41fb-8858-8fc0a81300c3] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:35:32.785] [INFO] [8ebbd0b0-cd3d-41fb-8858-8fc0a81300c3] Response: 304 (15ms)
+[2025-12-13 07:35:32.787] [INFO] [cd5162e4-2b02-4af9-bc1c-4cda40a1f54a] Response: 304 (23ms)
+[2025-12-13 07:35:32.795] [INFO] [0fc5a83a-ac67-4962-8796-47cc6d5007bc] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:35:32.797] [INFO] [0fc5a83a-ac67-4962-8796-47cc6d5007bc] Response: 304 (2ms)
+[2025-12-13 07:35:37.081] [INFO] [98047ff4-e308-457f-9c5a-d265794ac291] ====== PUT /api/v1/school ======
+[2025-12-13 07:35:37.097] [INFO] [98047ff4-e308-457f-9c5a-d265794ac291] Response: 200 (16ms)
+[2025-12-13 07:35:37.121] [INFO] [5da67944-4c2b-4d92-be84-a5eefdb59741] ====== GET /api/v1/school ======
+[2025-12-13 07:35:37.122] [INFO] [5da67944-4c2b-4d92-be84-a5eefdb59741] Response: 200 (1ms)
+[2025-12-13 07:36:00.407] [INFO] [e92564ca-97e0-4310-887d-906d058e4655] ====== PUT /api/v1/school ======
+[2025-12-13 07:36:00.465] [INFO] [e92564ca-97e0-4310-887d-906d058e4655] Response: 200 (58ms)
+[2025-12-13 07:36:00.471] [INFO] [6d43dc24-cfc2-4fcd-bc1c-538bd74aac93] ====== GET /api/v1/school ======
+[2025-12-13 07:36:00.473] [INFO] [6d43dc24-cfc2-4fcd-bc1c-538bd74aac93] Response: 200 (2ms)
+[2025-12-13 07:36:14.894] [INFO] [de7742c9-f522-4cc0-9b85-67a54a59cb6d] ====== PUT /api/v1/school ======
+[2025-12-13 07:36:14.906] [INFO] [de7742c9-f522-4cc0-9b85-67a54a59cb6d] Response: 200 (13ms)
+[2025-12-13 07:36:14.928] [INFO] [5ae749af-7aca-42cb-b50a-e5f1814e78f4] ====== GET /api/v1/school ======
+[2025-12-13 07:36:14.929] [INFO] [5ae749af-7aca-42cb-b50a-e5f1814e78f4] Response: 200 (1ms)
+[2025-12-13 07:36:23.142] [INFO] [95d4a33a-ce4e-45a2-a8ec-ca45b97574be] ====== PUT /api/v1/school ======
+[2025-12-13 07:36:23.145] [INFO] [95d4a33a-ce4e-45a2-a8ec-ca45b97574be] Response: 200 (3ms)
+[2025-12-13 07:36:23.181] [INFO] [5eaa50f7-f476-4738-abf5-b9a832a1b20e] ====== GET /api/v1/school ======
+[2025-12-13 07:36:23.183] [INFO] [5eaa50f7-f476-4738-abf5-b9a832a1b20e] Response: 200 (2ms)
+[2025-12-13 07:36:24.272] [INFO] [6f04408d-09d8-4c19-82ad-06f77275bb51] ====== GET /api/v1/school ======
+[2025-12-13 07:36:24.277] [INFO] [4bf46128-e7b0-4d99-aaa1-6a5619ff33e2] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:36:24.285] [INFO] [6f04408d-09d8-4c19-82ad-06f77275bb51] Response: 304 (13ms)
+[2025-12-13 07:36:24.300] [INFO] [4bf46128-e7b0-4d99-aaa1-6a5619ff33e2] Response: 304 (23ms)
+[2025-12-13 07:36:38.222] [INFO] [599fdd20-e32b-450f-96ba-4f2a512950f3] ====== PUT /api/v1/school ======
+[2025-12-13 07:36:38.250] [ERROR] [599fdd20-e32b-450f-96ba-4f2a512950f3] Error: duplicate key value violates unique constraint "schools_code_key"
+[2025-12-13 07:36:38.250] [ERROR] [599fdd20-e32b-450f-96ba-4f2a512950f3] error: duplicate key value violates unique constraint "schools_code_key"
+    at /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/pg@8.16.3/node_modules/pg/lib/client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:90:49)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async UpdateQueryBuilder.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/update-query-builder.js:459:24)
+    at async SchoolService.updateSchool (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:495:9)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:560:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_3a29631a._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+    at PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:102:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async UpdateQueryBuilder.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/update-query-builder.js:459:24)
+    at async SchoolService.updateSchool (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:495:9)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:560:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_3a29631a._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 07:36:38.251] [INFO] [599fdd20-e32b-450f-96ba-4f2a512950f3] Response: 409 (28ms)
+[2025-12-13 07:37:13.286] [INFO] [25ee249a-e830-49d8-a486-1e99d67a7586] ====== GET /api/v1/school ======
+[2025-12-13 07:37:13.300] [INFO] [25ee249a-e830-49d8-a486-1e99d67a7586] Response: 304 (14ms)
+[2025-12-13 07:37:14.478] [INFO] [bc7f4075-cebc-48b2-b40c-354edb825ae2] ====== PUT /api/v1/school ======
+[2025-12-13 07:37:14.483] [INFO] [bc7f4075-cebc-48b2-b40c-354edb825ae2] Response: 200 (5ms)
+[2025-12-13 07:37:14.515] [INFO] [a2fbdc5c-bb59-450d-b5e1-195f8861bc34] ====== GET /api/v1/school ======
+[2025-12-13 07:37:14.517] [INFO] [a2fbdc5c-bb59-450d-b5e1-195f8861bc34] Response: 200 (2ms)
+[2025-12-13 07:37:23.195] [INFO] [a6382a3a-c8e3-4f47-9f7d-66b6d03c1474] ====== PUT /api/v1/school ======
+[2025-12-13 07:37:23.199] [ERROR] [a6382a3a-c8e3-4f47-9f7d-66b6d03c1474] Error: duplicate key value violates unique constraint "schools_code_key"
+[2025-12-13 07:37:23.200] [ERROR] [a6382a3a-c8e3-4f47-9f7d-66b6d03c1474] error: duplicate key value violates unique constraint "schools_code_key"
+    at /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/pg@8.16.3/node_modules/pg/lib/client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:90:49)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async UpdateQueryBuilder.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/update-query-builder.js:459:24)
+    at async SchoolService.updateSchool (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:495:9)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:560:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_3a29631a._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+    at PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:102:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async UpdateQueryBuilder.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/update-query-builder.js:459:24)
+    at async SchoolService.updateSchool (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:495:9)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:560:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_3a29631a._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 07:37:23.202] [INFO] [a6382a3a-c8e3-4f47-9f7d-66b6d03c1474] Response: 409 (4ms)
+[2025-12-13 07:37:51.098] [INFO] [042f9584-3a3d-4b57-b567-883a6fedddbe] ====== PUT /api/v1/school ======
+[2025-12-13 07:37:51.119] [ERROR] [042f9584-3a3d-4b57-b567-883a6fedddbe] Error: duplicate key value violates unique constraint "schools_code_key"
+[2025-12-13 07:37:51.119] [ERROR] [042f9584-3a3d-4b57-b567-883a6fedddbe] error: duplicate key value violates unique constraint "schools_code_key"
+    at /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/pg@8.16.3/node_modules/pg/lib/client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:90:49)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async UpdateQueryBuilder.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/update-query-builder.js:459:24)
+    at async SchoolService.updateSchool (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:495:9)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:560:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_3a29631a._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+    at PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:102:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async UpdateQueryBuilder.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/update-query-builder.js:459:24)
+    at async SchoolService.updateSchool (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:495:9)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:560:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_3a29631a._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 07:37:51.119] [INFO] [042f9584-3a3d-4b57-b567-883a6fedddbe] Response: 409 (20ms)
+[2025-12-13 07:37:54.914] [INFO] [b507698d-5e9c-4229-a781-1b86a3f5eb72] ====== PUT /api/v1/school ======
+[2025-12-13 07:37:54.918] [INFO] [b507698d-5e9c-4229-a781-1b86a3f5eb72] Response: 200 (4ms)
+[2025-12-13 07:37:54.956] [INFO] [4fa85be9-52be-4856-899f-ef42b64df223] ====== GET /api/v1/school ======
+[2025-12-13 07:37:54.957] [INFO] [4fa85be9-52be-4856-899f-ef42b64df223] Response: 200 (1ms)
+[2025-12-13 07:38:43.706] [INFO] [af8c8e0d-614f-4021-9a6f-de62136b628a] ====== PUT /api/v1/school ======
+[2025-12-13 07:38:43.726] [INFO] [af8c8e0d-614f-4021-9a6f-de62136b628a] Response: 200 (21ms)
+[2025-12-13 07:38:43.752] [INFO] [5ba6f214-ecbd-47ed-8b8e-4588975b05ef] ====== GET /api/v1/school ======
+[2025-12-13 07:38:43.765] [INFO] [5ba6f214-ecbd-47ed-8b8e-4588975b05ef] Response: 200 (12ms)
+[2025-12-13 07:39:37.795] [INFO] [ef9c9038-9ed9-4f02-9ab6-075439291613] ====== GET /api/v1/school ======
+[2025-12-13 07:39:37.812] [INFO] [c712aa7e-06ae-420b-baba-e57e8e7b095a] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:39:37.834] [INFO] [c712aa7e-06ae-420b-baba-e57e8e7b095a] Response: 304 (22ms)
+[2025-12-13 07:39:37.838] [INFO] [ef9c9038-9ed9-4f02-9ab6-075439291613] Response: 304 (43ms)
+[2025-12-13 07:40:07.163] [INFO] [4e02aff5-5965-448c-8381-768fcf3ab4a2] ====== GET /api/v1/school ======
+[2025-12-13 07:40:07.175] [INFO] [4e02aff5-5965-448c-8381-768fcf3ab4a2] Response: 304 (12ms)
+[2025-12-13 07:40:16.517] [INFO] [f5b63621-8341-40d4-a9c9-29a84c5ddb85] ====== GET /api/v1/school ======
+[2025-12-13 07:40:16.519] [INFO] [f5b63621-8341-40d4-a9c9-29a84c5ddb85] Response: 304 (2ms)
+[2025-12-13 07:40:18.273] [INFO] [b2cd2326-c9a1-427f-b2fb-42946e0f3433] ====== GET /api/v1/school ======
+[2025-12-13 07:40:18.275] [INFO] [b2cd2326-c9a1-427f-b2fb-42946e0f3433] Response: 304 (2ms)
+[2025-12-13 07:40:28.297] [INFO] [978ee12f-50bc-4d89-8f84-54ff8b5cf5bd] ====== GET /api/v1/school ======
+[2025-12-13 07:40:28.300] [INFO] [1d31c1e8-cd4c-47db-b497-46190a0063dd] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:40:28.306] [INFO] [1d31c1e8-cd4c-47db-b497-46190a0063dd] Response: 304 (6ms)
+[2025-12-13 07:40:28.307] [INFO] [978ee12f-50bc-4d89-8f84-54ff8b5cf5bd] Response: 304 (10ms)
+[2025-12-13 07:40:40.308] [INFO] [00262470-e482-48be-9155-fa903e6eee1f] ====== GET /api/v1/school ======
+[2025-12-13 07:40:40.320] [INFO] [00262470-e482-48be-9155-fa903e6eee1f] Response: 304 (12ms)
+[2025-12-13 07:43:21.025] [INFO] [575a4f13-a630-4548-9d55-87639c0d97a6] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:43:21.046] [INFO] [cbcd02ac-fe05-4624-82a3-5359602bb27c] ====== GET /api/v1/school ======
+[2025-12-13 07:43:21.053] [INFO] [575a4f13-a630-4548-9d55-87639c0d97a6] Response: 304 (28ms)
+[2025-12-13 07:43:21.057] [INFO] [cbcd02ac-fe05-4624-82a3-5359602bb27c] Response: 200 (11ms)
+[2025-12-13 07:43:44.733] [INFO] [986174e2-5292-47e8-8521-8d96fd5dd45a] ====== PUT /api/v1/school ======
+[2025-12-13 07:43:44.751] [INFO] [986174e2-5292-47e8-8521-8d96fd5dd45a] Response: 200 (18ms)
+[2025-12-13 07:43:44.779] [INFO] [c3936632-54ef-4343-b71f-73f956d42799] ====== GET /api/v1/school ======
+[2025-12-13 07:43:44.781] [INFO] [c3936632-54ef-4343-b71f-73f956d42799] Response: 200 (2ms)
+[2025-12-13 07:43:52.384] [INFO] [e69a1cfa-c1f9-489b-9e2b-6844d735ad51] ====== PUT /api/v1/school ======
+[2025-12-13 07:43:52.387] [INFO] [e69a1cfa-c1f9-489b-9e2b-6844d735ad51] Response: 200 (3ms)
+[2025-12-13 07:43:52.423] [INFO] [5e2a3170-21b8-41b5-9f35-24872e70b7f8] ====== GET /api/v1/school ======
+[2025-12-13 07:43:52.425] [INFO] [5e2a3170-21b8-41b5-9f35-24872e70b7f8] Response: 200 (2ms)
+[2025-12-13 07:44:23.221] [INFO] [652320bd-34cd-4dbe-92a5-06a9e8a78847] ====== GET /api/v1/school ======
+[2025-12-13 07:44:23.231] [INFO] [652320bd-34cd-4dbe-92a5-06a9e8a78847] Response: 304 (10ms)
+[2025-12-13 07:44:26.229] [INFO] [1859f978-f36f-4ddc-adaa-14abe1a22c71] ====== GET /api/v1/school ======
+[2025-12-13 07:44:26.231] [INFO] [1859f978-f36f-4ddc-adaa-14abe1a22c71] Response: 304 (2ms)
+[2025-12-13 07:44:28.832] [INFO] [0be698fe-4bbe-41de-b711-d70e71a3d248] ====== GET /api/v1/school ======
+[2025-12-13 07:44:28.834] [INFO] [0be698fe-4bbe-41de-b711-d70e71a3d248] Response: 304 (1ms)
+[2025-12-13 07:44:47.728] [INFO] [24fa876f-edbc-43cd-9142-5dec465494ba] ====== GET /api/v1/school ======
+[2025-12-13 07:44:47.747] [INFO] [24fa876f-edbc-43cd-9142-5dec465494ba] Response: 304 (19ms)
+[2025-12-13 07:45:25.592] [INFO] [e0fd1a67-cc4b-46f0-bfd7-1c9885b59c7c] ====== GET /api/v1/school ======
+[2025-12-13 07:45:25.601] [INFO] [e0fd1a67-cc4b-46f0-bfd7-1c9885b59c7c] Response: 304 (9ms)
+[2025-12-13 07:45:58.857] [INFO] [d376223d-578f-4328-8c77-1f1d846c25c9] ====== PUT /api/v1/school ======
+[2025-12-13 07:45:58.872] [INFO] [d376223d-578f-4328-8c77-1f1d846c25c9] Response: 200 (15ms)
+[2025-12-13 07:45:58.885] [INFO] [a51ac57e-82c4-4379-82f6-ae002bdcc8d7] ====== GET /api/v1/school ======
+[2025-12-13 07:45:58.886] [INFO] [a51ac57e-82c4-4379-82f6-ae002bdcc8d7] Response: 200 (1ms)
+[2025-12-13 07:46:25.344] [INFO] [f4992758-a70d-4fb2-a4e2-77272ea0a4f6] ====== GET /api/v1/school ======
+[2025-12-13 07:46:25.350] [INFO] [f4992758-a70d-4fb2-a4e2-77272ea0a4f6] Response: 304 (6ms)
+[2025-12-13 07:46:37.554] [INFO] [5d12c5af-adc6-4373-bc64-0d999ec56025] ====== GET /api/v1/school ======
+[2025-12-13 07:46:37.562] [INFO] [5d12c5af-adc6-4373-bc64-0d999ec56025] Response: 304 (8ms)
+[2025-12-13 07:46:40.065] [INFO] [bcace01f-5c30-45e5-bb20-facc09f5903f] ====== GET /api/v1/school ======
+[2025-12-13 07:46:40.067] [INFO] [bcace01f-5c30-45e5-bb20-facc09f5903f] Response: 304 (2ms)
+[2025-12-13 07:47:01.460] [INFO] [3aff0ab8-9a92-46f1-b701-c7a1a139ab4e] ====== GET /api/v1/school ======
+[2025-12-13 07:47:01.472] [INFO] [3aff0ab8-9a92-46f1-b701-c7a1a139ab4e] Response: 304 (12ms)
+[2025-12-13 07:47:10.727] [INFO] [de02d1c1-e580-46aa-8340-1511fe245487] ====== GET /api/v1/school ======
+[2025-12-13 07:47:10.742] [INFO] [8c5c32f7-f25d-485f-aba5-b71b0b6acfd1] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:47:10.744] [INFO] [de02d1c1-e580-46aa-8340-1511fe245487] Response: 304 (17ms)
+[2025-12-13 07:47:10.754] [INFO] [8c5c32f7-f25d-485f-aba5-b71b0b6acfd1] Response: 304 (12ms)
+[2025-12-13 07:47:16.246] [INFO] [8dc8c449-6d6e-4d98-96fd-6cca07027e25] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:47:16.249] [INFO] [55a9517d-cb1d-4a46-8a35-bb29b874aaa4] ====== GET /api/v1/school ======
+[2025-12-13 07:47:16.251] [INFO] [8dc8c449-6d6e-4d98-96fd-6cca07027e25] Response: 304 (5ms)
+[2025-12-13 07:47:16.255] [INFO] [55a9517d-cb1d-4a46-8a35-bb29b874aaa4] Response: 304 (6ms)
+[2025-12-13 07:47:41.714] [INFO] [bdacd6eb-952c-4a65-9af2-0b3dc01219cb] ====== GET /api/v1/school ======
+[2025-12-13 07:47:41.728] [INFO] [bdacd6eb-952c-4a65-9af2-0b3dc01219cb] Response: 304 (14ms)

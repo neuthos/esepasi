@@ -22,7 +22,11 @@ export const MENU_ITEMS: MenuItem[] = [
     icon: <BankOutlined />,
     label: "Sekolah & Admin",
     children: [
-      {key: "/dashboard/school", label: "Identitas Sekolah"},
+      {
+        key: "/dashboard/school",
+        icon: <BankOutlined />,
+        label: "Identitas Sekolah",
+      },
       {key: "/dashboard/users", icon: <UserOutlined />, label: "Admin Users"}, // From "admin sekolah bisa melakukan register..."
     ],
   },

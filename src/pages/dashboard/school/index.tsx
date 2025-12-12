@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Head from "next/head";
 import {useQuery, useMutation, useQueryClient} from "@tanstack/react-query";
 import {
@@ -14,7 +15,11 @@ import {
 } from "antd";
 import {UploadOutlined, SaveOutlined, BankOutlined} from "@ant-design/icons";
 import DashboardLayout from "@/components/layouts/DashboardLayout";
-import {schoolService, UpdateSchoolPayload} from "@/services/school.service";
+import {
+  schoolService,
+  UpdateSchoolPayload,
+  School,
+} from "@/services/school.service";
 import {useState, useEffect} from "react";
 
 const {Title, Text} = Typography;
@@ -34,11 +39,24 @@ export default function SchoolIdentityPage() {
     mutationFn: schoolService.updateSchoolDetails,
     onSuccess: () => {
       message.success("Identitas sekolah berhasil diperbarui");
-      queryClient.invalidateQueries({queryKey: ["school"]});
+      queryClient.invalidateQueries({
+        queryKey: [schoolService.getSchoolDetailsQuery],
+      });
       setIsEditing(false);
     },
+  });
+
+  const uploadMutation = useMutation({
+    mutationFn: schoolService.uploadLogo,
+    onSuccess: (url: any) => {
+      message.success("Logo berhasil diupload");
+      queryClient.setQueryData(
+        [schoolService.getSchoolDetailsQuery],
+        (old: School | undefined) => (old ? {...old, logo_url: url} : old)
+      );
+    },
     onError: () => {
-      message.error("Gagal memperbarui identitas sekolah");
+      message.error("Gagal mengupload logo");
     },
   });
 
@@ -55,14 +73,26 @@ export default function SchoolIdentityPage() {
   const onFinish = (values: UpdateSchoolPayload) => {
     mutation.mutate({
       ...values,
+      // Use the latest logo_url from query data (which might have been updated by upload)
       logo_url: school?.logo_url,
     });
   };
 
+  const handleUpload = async (options: any) => {
+    const {file, onSuccess, onError} = options;
+    try {
+      await uploadMutation.mutateAsync(file);
+      onSuccess("Ok");
+    } catch (err) {
+      onError({err});
+    }
+  };
+
+  console.log({school});
   return (
     <DashboardLayout>
       <Head>
-        <title>Identitas Sekolah | SchoolPay</title>
+        <title>Identitas Sekolah | ESepasi</title>
       </Head>
 
       <div className="max-w-4xl mx-auto space-y-6">
@@ -94,7 +124,6 @@ export default function SchoolIdentityPage() {
                         width={150}
                         src={school.logo_url}
                         alt="School Logo"
-                        preview={false} // Disable preview if not needed or add fallback
                         className="rounded-md object-contain"
                       />
                     ) : (
@@ -108,8 +137,17 @@ export default function SchoolIdentityPage() {
                     )}
                   </div>
                   {isEditing && (
-                    <Upload showUploadList={false} maxCount={1}>
-                      <Button icon={<UploadOutlined />}>Ganti Logo</Button>
+                    <Upload
+                      customRequest={handleUpload}
+                      showUploadList={false}
+                      accept="image/*"
+                    >
+                      <Button
+                        icon={<UploadOutlined />}
+                        loading={uploadMutation.isPending}
+                      >
+                        Ganti Logo
+                      </Button>
                     </Upload>
                   )}
                 </div>

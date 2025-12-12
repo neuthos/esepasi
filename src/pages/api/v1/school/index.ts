@@ -3,8 +3,10 @@ import {requireAuth} from "@/lib/auth/middleware";
 import {schoolService} from "@/modules/school/school.service";
 
 export default apiHandler(async (req, res) => {
-  if (req.method !== "GET") {
-    return methodNotAllowed(res, ["GET"]);
+  const method = req.method;
+
+  if (method !== "GET" && method !== "PUT") {
+    return methodNotAllowed(res, ["GET", "PUT"]);
   }
 
   // Require authentication
@@ -20,8 +22,34 @@ export default apiHandler(async (req, res) => {
     });
   }
 
-  res.status(200).json({
-    success: true,
-    data: school,
-  });
+  if (method === "GET") {
+    return res.status(200).json({
+      success: true,
+      data: school,
+    });
+  }
+
+  if (method === "PUT") {
+    const {name, code, address, logo_url} = req.body;
+
+    // Simple validation
+    if (!name || !code || !address) {
+      return res.status(400).json({
+        success: false,
+        message: "Missing required fields (name, code, address)",
+      });
+    }
+
+    await schoolService.updateSchool(school.id, {
+      name,
+      code,
+      address,
+      logo_url,
+    });
+
+    return res.status(200).json({
+      success: true,
+      message: "School identity updated successfully",
+    });
+  }
 });

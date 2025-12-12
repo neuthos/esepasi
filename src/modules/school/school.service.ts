@@ -38,7 +38,7 @@ export class SchoolService {
         code: schoolCode,
         address: data.address,
       })
-      .returning(["id", "name", "code", "address"])
+      .returning(["id", "name", "code", "address", "logo_url"])
       .executeTakeFirstOrThrow();
 
     // Update user's school_id
@@ -53,7 +53,7 @@ export class SchoolService {
       name: school.name,
       code: school.code,
       address: school.address || "",
-      phone: data.phone, // Phone not stored in schools table
+      logo_url: school.logo_url || "",
     };
   }
 
@@ -86,6 +86,7 @@ export class SchoolService {
       name: school.name,
       code: school.code,
       address: school.address || "",
+      logo_url: school.logo_url || "",
     };
   }
 
@@ -105,6 +106,26 @@ export class SchoolService {
     const timestamp = Date.now().toString().slice(-4);
 
     return `${initials}${timestamp}`;
+  }
+
+  /**
+   * Update school details
+   */
+  async updateSchool(
+    schoolId: string,
+    data: {name: string; code: string; address: string; logo_url?: string}
+  ): Promise<void> {
+    await db
+      .updateTable("schools")
+      .set({
+        name: data.name,
+        code: data.code,
+        address: data.address,
+        logo_url: data.logo_url,
+        updated_at: new Date(),
+      })
+      .where("id", "=", schoolId)
+      .execute();
   }
 }
 

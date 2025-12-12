@@ -48,7 +48,7 @@ export const handleError = (
     if (pgError.code === "23505") {
       return res.status(409).json({
         success: false,
-        message: "Resource already exists",
+        message: "Kode sekolah sudah terdaftar",
         error_code: "DUPLICATE_ENTRY",
       });
     }

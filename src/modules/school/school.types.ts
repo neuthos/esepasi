@@ -9,5 +9,5 @@ export interface SchoolResponse {
   name: string;
   code: string;
   address: string;
-  phone?: string; // Not stored in schools table directly
+  logo_url?: string;
 }
