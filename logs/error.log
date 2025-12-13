@@ -825,3 +825,211 @@
     at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
     at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
     at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:36:37.993] [ERROR] [fa452b5f-8c2f-43fb-9890-0f58db1f7c04] Error: Siswa dengan NIS 1Galang sudah terdaftar
+[2025-12-13 08:36:37.994] [ERROR] [fa452b5f-8c2f-43fb-9890-0f58db1f7c04] ConflictError: Siswa dengan NIS 1Galang sudah terdaftar
+    at StudentService.createStudent (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:537:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:725:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__cf7da6f0._.js:299:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:36:45.087] [ERROR] [5788729b-9b42-490f-9bc7-86e66b7203d7] Error: Siswa dengan NIS 1Galang sudah terdaftar
+[2025-12-13 08:36:45.087] [ERROR] [5788729b-9b42-490f-9bc7-86e66b7203d7] ConflictError: Siswa dengan NIS 1Galang sudah terdaftar
+    at StudentService.createStudent (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:537:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:725:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__cf7da6f0._.js:299:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:37:05.596] [ERROR] [c373db73-2d43-4b1a-b182-fc315d4454ae] Error: Siswa dengan NIS 123 sudah terdaftar
+[2025-12-13 08:37:05.596] [ERROR] [c373db73-2d43-4b1a-b182-fc315d4454ae] ConflictError: Siswa dengan NIS 123 sudah terdaftar
+    at StudentService.createStudent (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:537:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:725:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__cf7da6f0._.js:299:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:37:06.650] [ERROR] [56a3b6c6-4147-4ec3-a65c-378b9547659f] Error: Siswa dengan NIS 123 sudah terdaftar
+[2025-12-13 08:37:06.650] [ERROR] [56a3b6c6-4147-4ec3-a65c-378b9547659f] ConflictError: Siswa dengan NIS 123 sudah terdaftar
+    at StudentService.createStudent (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:537:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:725:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__cf7da6f0._.js:299:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:51:41.354] [ERROR] [dc406001-6be1-47cc-89ee-8e1b5f69b3cd] Error: finalQuery is not defined
+[2025-12-13 08:51:41.354] [ERROR] [dc406001-6be1-47cc-89ee-8e1b5f69b3cd] ReferenceError: finalQuery is not defined
+    at StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:453:25)
+    at /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:618:185
+    at /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:19
+    at apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4431)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:51:42.379] [ERROR] [7c964ada-d2cd-4db2-8e17-3d16fd9b4049] Error: finalQuery is not defined
+[2025-12-13 08:51:42.380] [ERROR] [7c964ada-d2cd-4db2-8e17-3d16fd9b4049] ReferenceError: finalQuery is not defined
+    at StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:453:25)
+    at /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:618:185
+    at /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:19
+    at apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4431)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:53:45.145] [ERROR] [000693d6-f168-44d3-96c5-3a7f31aa7339] Error: column students.nam does not exist
+[2025-12-13 08:53:45.146] [ERROR] [000693d6-f168-44d3-96c5-3a7f31aa7339] error: column students.nam does not exist
+    at /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/pg@8.16.3/node_modules/pg/lib/client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:90:49)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async SelectQueryBuilderImpl.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/select-query-builder.js:317:24)
+    at async StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:484:25)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:649:24
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+    at PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:102:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async SelectQueryBuilderImpl.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/select-query-builder.js:317:24)
+    at async StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:484:25)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:649:24
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:53:46.297] [ERROR] [499e7d1d-75c0-45b2-931e-622a5868b89a] Error: column students.nam does not exist
+[2025-12-13 08:53:46.298] [ERROR] [499e7d1d-75c0-45b2-931e-622a5868b89a] error: column students.nam does not exist
+    at /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/pg@8.16.3/node_modules/pg/lib/client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:90:49)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async SelectQueryBuilderImpl.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/select-query-builder.js:317:24)
+    at async StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:484:25)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:649:24
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+    at PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:102:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async SelectQueryBuilderImpl.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/select-query-builder.js:317:24)
+    at async StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:484:25)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:649:24
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)

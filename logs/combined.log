@@ -1297,3 +1297,521 @@
 [2025-12-13 08:15:04.610] [INFO] [ab820ff1-978b-4d19-820f-6b85dfe6d668] Response: 304 (2ms)
 [2025-12-13 08:15:05.566] [INFO] [c9bd87de-1077-4e76-80b5-3d031a49b46a] ====== GET /api/v1/users ======
 [2025-12-13 08:15:05.568] [INFO] [c9bd87de-1077-4e76-80b5-3d031a49b46a] Response: 304 (2ms)
+[2025-12-13 08:16:18.153] [INFO] [b708c807-4a89-446b-8bee-cac8ec96f294] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:16:18.214] [INFO] [b708c807-4a89-446b-8bee-cac8ec96f294] Response: 304 (61ms)
+[2025-12-13 08:16:27.728] [INFO] [b35673d0-27cd-4634-9b5c-13eb8360590a] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:16:27.738] [INFO] [b35673d0-27cd-4634-9b5c-13eb8360590a] Response: 304 (10ms)
+[2025-12-13 08:16:58.975] [INFO] [77552de1-9276-4cd5-b6ea-a99b6c6b2312] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:16:59.039] [INFO] [77552de1-9276-4cd5-b6ea-a99b6c6b2312] Response: 304 (64ms)
+[2025-12-13 08:17:42.881] [INFO] [1aa32763-6434-47db-9b3c-2d232b0a0e3b] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:17:42.891] [INFO] [1aa32763-6434-47db-9b3c-2d232b0a0e3b] Response: 304 (10ms)
+[2025-12-13 08:17:54.928] [INFO] [6f99e0c5-898c-40af-b426-0d9eca73e510] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:17:54.952] [INFO] [6f99e0c5-898c-40af-b426-0d9eca73e510] Response: 304 (24ms)
+[2025-12-13 08:19:27.046] [INFO] [6ec65c16-a37d-439c-98f8-f8e070da9985] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:19:27.077] [INFO] [6ec65c16-a37d-439c-98f8-f8e070da9985] Response: 304 (31ms)
+[2025-12-13 08:20:18.344] [INFO] [73ddc0a1-c95e-458a-9725-5d0a44215e42] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:20:18.371] [INFO] [73ddc0a1-c95e-458a-9725-5d0a44215e42] Response: 304 (27ms)
+[2025-12-13 08:21:11.161] [INFO] [9a8947e4-8586-43ed-bcfc-529aba5ef2e6] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:21:11.180] [INFO] [9a8947e4-8586-43ed-bcfc-529aba5ef2e6] Response: 304 (19ms)
+[2025-12-13 08:21:26.869] [INFO] [321f2522-fba9-4411-8d3f-d70b0414c46f] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:21:26.876] [INFO] [321f2522-fba9-4411-8d3f-d70b0414c46f] Response: 304 (7ms)
+[2025-12-13 08:36:09.458] [INFO] [0ff79b4d-337a-4495-9bd9-fae59438af21] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:36:09.494] [INFO] [0ff79b4d-337a-4495-9bd9-fae59438af21] Response: 304 (36ms)
+[2025-12-13 08:36:09.858] [INFO] [2c19ea34-b282-4dc1-919c-a1d341f02d67] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:36:09.882] [INFO] [2c19ea34-b282-4dc1-919c-a1d341f02d67] Response: 200 (23ms)
+[2025-12-13 08:36:11.764] [INFO] [27dc1e51-7e47-4fbb-80de-ab0d28691a3e] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:36:11.767] [INFO] [27dc1e51-7e47-4fbb-80de-ab0d28691a3e] Response: 304 (3ms)
+[2025-12-13 08:36:27.311] [INFO] [8b452d7b-f488-4f76-a024-fe5f715d8945] ====== POST /api/v1/students ======
+[2025-12-13 08:36:27.322] [INFO] [8b452d7b-f488-4f76-a024-fe5f715d8945] Response: 201 (11ms)
+[2025-12-13 08:36:27.371] [INFO] [1c84ed72-783f-41fa-a7b1-9adc1715d0ec] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:36:27.403] [INFO] [1c84ed72-783f-41fa-a7b1-9adc1715d0ec] Response: 200 (33ms)
+[2025-12-13 08:36:33.226] [INFO] [2d7c19ab-0861-4b01-ab5f-e2d4ffdc9a2f] ====== POST /api/v1/students ======
+[2025-12-13 08:36:33.231] [INFO] [2d7c19ab-0861-4b01-ab5f-e2d4ffdc9a2f] Response: 201 (5ms)
+[2025-12-13 08:36:33.276] [INFO] [2e544cf6-9cb4-42e4-b2d4-d3cc525668b7] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:36:33.278] [INFO] [2e544cf6-9cb4-42e4-b2d4-d3cc525668b7] Response: 200 (2ms)
+[2025-12-13 08:36:37.991] [INFO] [fa452b5f-8c2f-43fb-9890-0f58db1f7c04] ====== POST /api/v1/students ======
+[2025-12-13 08:36:37.993] [ERROR] [fa452b5f-8c2f-43fb-9890-0f58db1f7c04] Error: Siswa dengan NIS 1Galang sudah terdaftar
+[2025-12-13 08:36:37.994] [ERROR] [fa452b5f-8c2f-43fb-9890-0f58db1f7c04] ConflictError: Siswa dengan NIS 1Galang sudah terdaftar
+    at StudentService.createStudent (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:537:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:725:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__cf7da6f0._.js:299:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:36:37.994] [INFO] [fa452b5f-8c2f-43fb-9890-0f58db1f7c04] Response: 409 (2ms)
+[2025-12-13 08:36:45.085] [INFO] [5788729b-9b42-490f-9bc7-86e66b7203d7] ====== POST /api/v1/students ======
+[2025-12-13 08:36:45.087] [ERROR] [5788729b-9b42-490f-9bc7-86e66b7203d7] Error: Siswa dengan NIS 1Galang sudah terdaftar
+[2025-12-13 08:36:45.087] [ERROR] [5788729b-9b42-490f-9bc7-86e66b7203d7] ConflictError: Siswa dengan NIS 1Galang sudah terdaftar
+    at StudentService.createStudent (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:537:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:725:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__cf7da6f0._.js:299:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:36:45.088] [INFO] [5788729b-9b42-490f-9bc7-86e66b7203d7] Response: 409 (2ms)
+[2025-12-13 08:36:50.928] [INFO] [3d7dd4f9-e9b3-4e8a-82ba-24a3747985ee] ====== POST /api/v1/students ======
+[2025-12-13 08:36:50.931] [INFO] [3d7dd4f9-e9b3-4e8a-82ba-24a3747985ee] Response: 201 (3ms)
+[2025-12-13 08:36:50.989] [INFO] [4e960b7f-302f-4557-85b9-e43a13a36fa2] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:36:50.993] [INFO] [4e960b7f-302f-4557-85b9-e43a13a36fa2] Response: 200 (3ms)
+[2025-12-13 08:37:01.064] [INFO] [a9fde63c-19c5-4683-aeb5-8ac858f63966] ====== POST /api/v1/students ======
+[2025-12-13 08:37:01.077] [INFO] [a9fde63c-19c5-4683-aeb5-8ac858f63966] Response: 201 (13ms)
+[2025-12-13 08:37:01.130] [INFO] [1a85e27f-5be4-434a-b14e-f8cdca7ea56a] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:37:01.135] [INFO] [1a85e27f-5be4-434a-b14e-f8cdca7ea56a] Response: 200 (5ms)
+[2025-12-13 08:37:05.594] [INFO] [c373db73-2d43-4b1a-b182-fc315d4454ae] ====== POST /api/v1/students ======
+[2025-12-13 08:37:05.596] [ERROR] [c373db73-2d43-4b1a-b182-fc315d4454ae] Error: Siswa dengan NIS 123 sudah terdaftar
+[2025-12-13 08:37:05.596] [ERROR] [c373db73-2d43-4b1a-b182-fc315d4454ae] ConflictError: Siswa dengan NIS 123 sudah terdaftar
+    at StudentService.createStudent (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:537:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:725:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__cf7da6f0._.js:299:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:37:05.597] [INFO] [c373db73-2d43-4b1a-b182-fc315d4454ae] Response: 409 (2ms)
+[2025-12-13 08:37:06.648] [INFO] [56a3b6c6-4147-4ec3-a65c-378b9547659f] ====== POST /api/v1/students ======
+[2025-12-13 08:37:06.650] [ERROR] [56a3b6c6-4147-4ec3-a65c-378b9547659f] Error: Siswa dengan NIS 123 sudah terdaftar
+[2025-12-13 08:37:06.650] [ERROR] [56a3b6c6-4147-4ec3-a65c-378b9547659f] ConflictError: Siswa dengan NIS 123 sudah terdaftar
+    at StudentService.createStudent (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:537:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:725:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__cf7da6f0._.js:299:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:37:06.651] [INFO] [56a3b6c6-4147-4ec3-a65c-378b9547659f] Response: 409 (2ms)
+[2025-12-13 08:38:50.577] [INFO] [220659df-3f74-431a-9886-f7dc7d7a68c4] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:38:50.588] [INFO] [220659df-3f74-431a-9886-f7dc7d7a68c4] Response: 304 (11ms)
+[2025-12-13 08:39:50.954] [INFO] [323b8f56-54c7-4e3e-9d4c-491a296d10a2] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:39:50.957] [INFO] [0e473af5-d808-4174-a02c-4cd627c1a9f8] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:39:50.969] [INFO] [323b8f56-54c7-4e3e-9d4c-491a296d10a2] Response: 304 (15ms)
+[2025-12-13 08:39:50.970] [INFO] [0e473af5-d808-4174-a02c-4cd627c1a9f8] Response: 304 (13ms)
+[2025-12-13 08:39:53.419] [INFO] [4f126864-c1a5-4f3a-ac5f-0a7b00939955] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:39:53.421] [INFO] [c30d5ab4-53be-4d27-8117-b5b4c248634e] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:39:53.423] [INFO] [4f126864-c1a5-4f3a-ac5f-0a7b00939955] Response: 304 (3ms)
+[2025-12-13 08:39:53.427] [INFO] [c30d5ab4-53be-4d27-8117-b5b4c248634e] Response: 304 (6ms)
+[2025-12-13 08:40:15.778] [INFO] [957a5532-0201-4649-87c8-ea37d8f815d7] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status=belum_lunas ======
+[2025-12-13 08:40:15.798] [INFO] [957a5532-0201-4649-87c8-ea37d8f815d7] Response: 200 (20ms)
+[2025-12-13 08:40:17.543] [INFO] [1e9907d6-848a-48cd-882d-193d3e7aa2fa] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:40:17.547] [INFO] [1e9907d6-848a-48cd-882d-193d3e7aa2fa] Response: 304 (4ms)
+[2025-12-13 08:40:19.177] [INFO] [2f70be4f-cec3-44b1-a054-6f0b0a30ee37] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status=lunas ======
+[2025-12-13 08:40:19.181] [INFO] [2f70be4f-cec3-44b1-a054-6f0b0a30ee37] Response: 200 (4ms)
+[2025-12-13 08:40:21.522] [INFO] [6ebed3f4-db05-4b39-a981-468a61dd99a1] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:40:21.526] [INFO] [6ebed3f4-db05-4b39-a981-468a61dd99a1] Response: 304 (4ms)
+[2025-12-13 08:40:23.323] [INFO] [fd591d3e-00f2-4ffd-8e27-9eaa7071acb0] ====== GET /api/v1/students?page=1&limit=10&search=&status=inactive&payment_status= ======
+[2025-12-13 08:40:23.328] [INFO] [fd591d3e-00f2-4ffd-8e27-9eaa7071acb0] Response: 200 (5ms)
+[2025-12-13 08:40:25.464] [INFO] [3aba4e71-5268-4bd3-8350-7c650508e086] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:40:25.468] [INFO] [3aba4e71-5268-4bd3-8350-7c650508e086] Response: 304 (4ms)
+[2025-12-13 08:40:29.988] [INFO] [1e042737-b287-488a-8759-fbe59218b0e0] ====== GET /api/v1/students?page=1&limit=10&search=1&status=&payment_status= ======
+[2025-12-13 08:40:30.061] [INFO] [1e042737-b287-488a-8759-fbe59218b0e0] Response: 200 (73ms)
+[2025-12-13 08:40:32.695] [INFO] [60a2f36c-d86e-4932-8115-c51a5f0242d8] ====== GET /api/v1/students?page=1&limit=10&search=2&status=&payment_status= ======
+[2025-12-13 08:40:32.700] [INFO] [60a2f36c-d86e-4932-8115-c51a5f0242d8] Response: 200 (6ms)
+[2025-12-13 08:40:34.595] [INFO] [23a5cbd9-f116-44b7-a158-8cfa521e5eb9] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:40:34.600] [INFO] [23a5cbd9-f116-44b7-a158-8cfa521e5eb9] Response: 304 (5ms)
+[2025-12-13 08:40:36.377] [INFO] [454444dd-669e-4af8-aed9-ccc45a027830] ====== GET /api/v1/students?page=1&limit=10&search=2&status=&payment_status= ======
+[2025-12-13 08:40:36.381] [INFO] [454444dd-669e-4af8-aed9-ccc45a027830] Response: 304 (4ms)
+[2025-12-13 08:40:37.180] [INFO] [5e7ecf26-1c90-47c9-a77d-f2c7723c366c] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:40:37.184] [INFO] [7af672e4-0886-4612-b1dd-1b1c0cf25d13] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:40:37.188] [INFO] [5e7ecf26-1c90-47c9-a77d-f2c7723c366c] Response: 304 (8ms)
+[2025-12-13 08:40:37.201] [INFO] [7af672e4-0886-4612-b1dd-1b1c0cf25d13] Response: 304 (17ms)
+[2025-12-13 08:40:37.212] [INFO] [81fd7288-8db4-450f-a277-edcb81054fea] ====== GET /api/v1/students?page=1&limit=10&search=2&status=&payment_status= ======
+[2025-12-13 08:40:37.220] [INFO] [81fd7288-8db4-450f-a277-edcb81054fea] Response: 304 (8ms)
+[2025-12-13 08:40:40.040] [INFO] [9550fa5b-e185-41cd-acaa-881525a0482f] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:40:40.045] [INFO] [9550fa5b-e185-41cd-acaa-881525a0482f] Response: 304 (5ms)
+[2025-12-13 08:40:47.028] [INFO] [947adf68-ff8f-44e5-b8b0-3b2ad3894a5a] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:40:47.046] [INFO] [947adf68-ff8f-44e5-b8b0-3b2ad3894a5a] Response: 304 (18ms)
+[2025-12-13 08:41:39.487] [INFO] [95cecfb3-833b-4d33-b4ce-1ad043cb396f] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:41:39.524] [INFO] [95cecfb3-833b-4d33-b4ce-1ad043cb396f] Response: 304 (36ms)
+[2025-12-13 08:41:47.715] [INFO] [0865139b-2aa8-4638-9aa2-e3c6ec9f12f5] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:41:47.765] [INFO] [0865139b-2aa8-4638-9aa2-e3c6ec9f12f5] Response: 304 (50ms)
+[2025-12-13 08:42:31.292] [INFO] [177ee8d4-7e39-40d8-a3ac-08abf63904e6] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:42:31.312] [INFO] [177ee8d4-7e39-40d8-a3ac-08abf63904e6] Response: 201 (21ms)
+[2025-12-13 08:42:31.320] [INFO] [82d0ab07-66a2-4430-84cf-1fd802a9549c] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:42:31.360] [INFO] [82d0ab07-66a2-4430-84cf-1fd802a9549c] Response: 200 (40ms)
+[2025-12-13 08:43:05.321] [INFO] [f84c5307-979b-4df7-ade7-929d721bc623] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:43:05.343] [INFO] [f84c5307-979b-4df7-ade7-929d721bc623] Response: 200 (23ms)
+[2025-12-13 08:43:07.501] [INFO] [a37109fe-5012-467d-a04e-97b56733b1b7] ====== GET /api/v1/students?page=10&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:43:07.515] [INFO] [a37109fe-5012-467d-a04e-97b56733b1b7] Response: 200 (14ms)
+[2025-12-13 08:43:11.253] [INFO] [ab9e8587-49b3-49e2-bb64-c1833bbbdfe2] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:43:11.256] [INFO] [ab9e8587-49b3-49e2-bb64-c1833bbbdfe2] Response: 304 (3ms)
+[2025-12-13 08:43:13.456] [INFO] [04a3cafe-46b1-4b69-ad53-2400b800b14c] ====== GET /api/v1/students?page=2&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:43:13.460] [INFO] [04a3cafe-46b1-4b69-ad53-2400b800b14c] Response: 200 (4ms)
+[2025-12-13 08:43:15.103] [INFO] [c38096e7-7861-42cb-8764-2dd0d3e62b46] ====== GET /api/v1/students?page=3&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:43:15.107] [INFO] [c38096e7-7861-42cb-8764-2dd0d3e62b46] Response: 200 (4ms)
+[2025-12-13 08:43:18.846] [INFO] [c67f0634-38d5-48ac-ae28-cea39d708646] ====== GET /api/v1/students?page=4&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:43:18.850] [INFO] [c67f0634-38d5-48ac-ae28-cea39d708646] Response: 200 (4ms)
+[2025-12-13 08:43:23.428] [INFO] [38dfa9a3-9280-4c97-a339-d1c47918461d] ====== GET /api/v1/students?page=1&limit=10&search=37&status=&payment_status= ======
+[2025-12-13 08:43:23.432] [INFO] [38dfa9a3-9280-4c97-a339-d1c47918461d] Response: 200 (4ms)
+[2025-12-13 08:43:26.418] [INFO] [d94946cd-ada3-431e-a672-431961881f2b] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:43:26.422] [INFO] [d94946cd-ada3-431e-a672-431961881f2b] Response: 200 (4ms)
+[2025-12-13 08:43:28.795] [INFO] [d6770535-f921-424b-9fa1-f64deba7d0f1] ====== GET /api/v1/students?page=3&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:43:28.799] [INFO] [d6770535-f921-424b-9fa1-f64deba7d0f1] Response: 200 (4ms)
+[2025-12-13 08:43:31.297] [INFO] [aaf76ac4-6d2e-4b61-9ffa-3b31dafb4b72] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:43:31.301] [INFO] [aaf76ac4-6d2e-4b61-9ffa-3b31dafb4b72] Response: 304 (4ms)
+[2025-12-13 08:44:00.095] [INFO] [bfa37d3b-3979-478e-8ca0-ac5928990a71] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:44:00.143] [INFO] [bfa37d3b-3979-478e-8ca0-ac5928990a71] Response: 201 (47ms)
+[2025-12-13 08:44:00.179] [INFO] [06d66576-32a1-4695-b39d-53a5b7b6041c] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:44:00.184] [INFO] [06d66576-32a1-4695-b39d-53a5b7b6041c] Response: 304 (5ms)
+[2025-12-13 08:44:03.826] [INFO] [47648b84-6024-423d-a041-bb5092713e3f] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:44:03.833] [INFO] [47648b84-6024-423d-a041-bb5092713e3f] Response: 200 (8ms)
+[2025-12-13 08:44:15.920] [INFO] [14140641-f447-4ab5-9b6e-419e59cf177f] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:44:15.925] [INFO] [026fff27-d599-40f3-a893-60a62ae0be84] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:44:15.957] [INFO] [9e4c6b4a-6b0d-4e8b-9077-d02a21c4e005] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:44:15.959] [INFO] [14140641-f447-4ab5-9b6e-419e59cf177f] Response: 304 (39ms)
+[2025-12-13 08:44:15.966] [INFO] [026fff27-d599-40f3-a893-60a62ae0be84] Response: 304 (41ms)
+[2025-12-13 08:44:15.978] [INFO] [9e4c6b4a-6b0d-4e8b-9077-d02a21c4e005] Response: 304 (21ms)
+[2025-12-13 08:44:41.483] [INFO] [66d72794-a637-402c-a1af-a861f76d5908] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:44:41.501] [INFO] [66d72794-a637-402c-a1af-a861f76d5908] Response: 304 (17ms)
+[2025-12-13 08:44:57.978] [INFO] [1054e037-c290-4ca8-87b9-5b04d93eb80e] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:44:58.013] [INFO] [1054e037-c290-4ca8-87b9-5b04d93eb80e] Response: 304 (35ms)
+[2025-12-13 08:45:39.199] [INFO] [4500c373-be72-4ec6-a150-6491016ed52a] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:45:39.236] [INFO] [0eb0a35a-45f1-4fa8-b037-6d5200708b94] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:45:39.239] [INFO] [74109ee2-22e8-47be-8644-4f4c21981ac3] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:45:39.245] [INFO] [4500c373-be72-4ec6-a150-6491016ed52a] Response: 304 (46ms)
+[2025-12-13 08:45:39.254] [INFO] [74109ee2-22e8-47be-8644-4f4c21981ac3] Response: 304 (15ms)
+[2025-12-13 08:45:39.255] [INFO] [0eb0a35a-45f1-4fa8-b037-6d5200708b94] Response: 304 (19ms)
+[2025-12-13 08:45:42.467] [INFO] [abe73ce6-cace-40ea-b524-584582de8081] ====== GET /api/v1/students/a077b8cd-96bb-4bb6-91e7-c84d8d6c8827 ======
+[2025-12-13 08:45:42.473] [INFO] [abe73ce6-cace-40ea-b524-584582de8081] Response: 200 (6ms)
+[2025-12-13 08:45:45.838] [INFO] [ecc089bc-ed8e-470f-a356-3c0f8317b5a0] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:45:45.845] [INFO] [ecc089bc-ed8e-470f-a356-3c0f8317b5a0] Response: 304 (7ms)
+[2025-12-13 08:45:48.903] [INFO] [3c786532-87cb-4a87-b323-2388308c0e8c] ====== GET /api/v1/students/2e258a61-4c96-497c-b949-13f539653636 ======
+[2025-12-13 08:45:48.906] [INFO] [3c786532-87cb-4a87-b323-2388308c0e8c] Response: 200 (3ms)
+[2025-12-13 08:45:50.462] [INFO] [ed9e6da7-33e5-4e69-a0aa-8b7a31dd6365] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:45:50.466] [INFO] [ed9e6da7-33e5-4e69-a0aa-8b7a31dd6365] Response: 304 (4ms)
+[2025-12-13 08:45:52.305] [INFO] [b6ff686f-be14-48e4-bc93-24b106d07c4f] ====== GET /api/v1/students/2e258a61-4c96-497c-b949-13f539653636 ======
+[2025-12-13 08:45:52.308] [INFO] [b6ff686f-be14-48e4-bc93-24b106d07c4f] Response: 304 (3ms)
+[2025-12-13 08:45:53.200] [INFO] [6dc22f46-c8bc-47d3-8a42-715c936e438e] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:45:53.204] [INFO] [6dc22f46-c8bc-47d3-8a42-715c936e438e] Response: 304 (4ms)
+[2025-12-13 08:45:57.192] [INFO] [6b6f356c-9bb9-4474-9e13-cac17e0e450a] ====== PUT /api/v1/students/2e258a61-4c96-497c-b949-13f539653636 ======
+[2025-12-13 08:45:57.211] [INFO] [6b6f356c-9bb9-4474-9e13-cac17e0e450a] Response: 200 (19ms)
+[2025-12-13 08:45:57.302] [INFO] [fefc1c26-837b-42a8-bcbb-5e6bbe51a82a] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:45:57.306] [INFO] [fefc1c26-837b-42a8-bcbb-5e6bbe51a82a] Response: 200 (4ms)
+[2025-12-13 08:45:59.949] [INFO] [3dc621b6-91ea-4538-83bb-a6b94e183b89] ====== GET /api/v1/students?page=12&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:45:59.967] [INFO] [3dc621b6-91ea-4538-83bb-a6b94e183b89] Response: 304 (19ms)
+[2025-12-13 08:46:05.659] [INFO] [8979843e-00b9-440f-828f-c94d0dcd1c90] ====== GET /api/v1/students?page=1&limit=10&search=&status=inactive&payment_status= ======
+[2025-12-13 08:46:05.663] [INFO] [8979843e-00b9-440f-828f-c94d0dcd1c90] Response: 200 (5ms)
+[2025-12-13 08:46:08.163] [INFO] [ec44e3f2-7cda-4110-be29-38951a1cdffa] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:46:08.167] [INFO] [ec44e3f2-7cda-4110-be29-38951a1cdffa] Response: 304 (4ms)
+[2025-12-13 08:46:28.747] [INFO] [6e1bcfc9-6a75-4277-a285-fe321c1bdb00] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:46:28.758] [INFO] [6e1bcfc9-6a75-4277-a285-fe321c1bdb00] Response: 201 (11ms)
+[2025-12-13 08:46:28.809] [INFO] [8c9aacf9-379e-4667-b2e3-8729788c15c1] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:46:28.817] [INFO] [8c9aacf9-379e-4667-b2e3-8729788c15c1] Response: 304 (7ms)
+[2025-12-13 08:46:47.958] [INFO] [dd001fd0-c940-4e18-8a9f-681fd2ff3fe6] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:46:47.979] [INFO] [dd001fd0-c940-4e18-8a9f-681fd2ff3fe6] Response: 304 (20ms)
+[2025-12-13 08:47:10.501] [INFO] [e448b887-b281-4845-812a-c74d09a38d56] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:47:10.575] [INFO] [e448b887-b281-4845-812a-c74d09a38d56] Response: 304 (74ms)
+[2025-12-13 08:47:17.224] [INFO] [9be95f48-e112-475d-8a6c-66b040b3c4e2] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:47:17.243] [INFO] [9be95f48-e112-475d-8a6c-66b040b3c4e2] Response: 201 (19ms)
+[2025-12-13 08:47:19.348] [INFO] [145eba0e-22e1-4cb8-b4d5-b64f84f9c823] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:47:19.352] [INFO] [145eba0e-22e1-4cb8-b4d5-b64f84f9c823] Response: 201 (4ms)
+[2025-12-13 08:47:25.382] [INFO] [c15d88ef-ca20-4b26-b53c-c3ff42ce126e] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:47:25.386] [INFO] [c15d88ef-ca20-4b26-b53c-c3ff42ce126e] Response: 201 (4ms)
+[2025-12-13 08:47:49.952] [INFO] [6e6478f8-e375-42d8-9412-dac1cd422608] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:47:49.971] [INFO] [6e6478f8-e375-42d8-9412-dac1cd422608] Response: 304 (19ms)
+[2025-12-13 08:47:51.007] [INFO] [87316946-e2cc-4f70-8f76-04b7725bf89e] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:47:51.012] [INFO] [87316946-e2cc-4f70-8f76-04b7725bf89e] Response: 201 (5ms)
+[2025-12-13 08:48:14.734] [INFO] [aaa5fa69-d136-40d8-8c74-f5ff2a469b1f] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:48:14.753] [INFO] [aaa5fa69-d136-40d8-8c74-f5ff2a469b1f] Response: 304 (19ms)
+[2025-12-13 08:48:17.378] [INFO] [fd92db97-89fb-4ccf-85da-93349664fdab] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:48:17.387] [INFO] [fd92db97-89fb-4ccf-85da-93349664fdab] Response: 201 (9ms)
+[2025-12-13 08:48:17.460] [INFO] [590cef0d-5547-4fdc-9442-67873b8b5ec8] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:48:17.463] [INFO] [590cef0d-5547-4fdc-9442-67873b8b5ec8] Response: 304 (3ms)
+[2025-12-13 08:48:28.887] [INFO] [c8dbd3e5-3c93-4c92-ae94-d2cfd6af7c36] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:48:28.898] [INFO] [c8dbd3e5-3c93-4c92-ae94-d2cfd6af7c36] Response: 201 (11ms)
+[2025-12-13 08:48:28.972] [INFO] [b164452b-d2a1-427f-a39c-2d324752d3cd] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:48:28.978] [INFO] [b164452b-d2a1-427f-a39c-2d324752d3cd] Response: 304 (6ms)
+[2025-12-13 08:48:43.260] [INFO] [a0a8d344-94c2-4c18-b0ab-8cc0cd8124a8] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:48:43.273] [INFO] [a0a8d344-94c2-4c18-b0ab-8cc0cd8124a8] Response: 201 (14ms)
+[2025-12-13 08:48:43.344] [INFO] [964b7970-aaf8-40ca-b48b-bfa50e4add81] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:48:43.349] [INFO] [964b7970-aaf8-40ca-b48b-bfa50e4add81] Response: 304 (5ms)
+[2025-12-13 08:48:54.691] [INFO] [42956b98-7802-44c6-905e-b2086c209af9] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:48:54.718] [INFO] [42956b98-7802-44c6-905e-b2086c209af9] Response: 304 (27ms)
+[2025-12-13 08:49:04.492] [INFO] [c322c529-6672-4743-b0df-c6582626556f] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:49:04.509] [INFO] [c322c529-6672-4743-b0df-c6582626556f] Response: 201 (17ms)
+[2025-12-13 08:49:04.584] [INFO] [8ff0cf32-c88d-436c-a5f8-be642abeaa55] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:49:04.587] [INFO] [8ff0cf32-c88d-436c-a5f8-be642abeaa55] Response: 304 (3ms)
+[2025-12-13 08:49:18.711] [INFO] [a746e3de-cda4-441c-b2f4-cb3a343e6856] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:49:18.730] [INFO] [a746e3de-cda4-441c-b2f4-cb3a343e6856] Response: 304 (19ms)
+[2025-12-13 08:49:25.828] [INFO] [f9010afc-f4bd-4fa7-93fa-9aca67966ba4] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:49:25.836] [INFO] [f9010afc-f4bd-4fa7-93fa-9aca67966ba4] Response: 201 (8ms)
+[2025-12-13 08:49:25.895] [INFO] [1a443fc4-a5db-4879-9762-2fd8e706e4be] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:49:25.898] [INFO] [1a443fc4-a5db-4879-9762-2fd8e706e4be] Response: 304 (3ms)
+[2025-12-13 08:49:39.680] [INFO] [c931524a-e2b3-4f3f-bfbd-29a395f39adc] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:49:39.698] [INFO] [c931524a-e2b3-4f3f-bfbd-29a395f39adc] Response: 201 (18ms)
+[2025-12-13 08:49:39.759] [INFO] [6f7cd1ae-83da-4546-af0d-f42ff85bcbab] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:49:39.766] [INFO] [6f7cd1ae-83da-4546-af0d-f42ff85bcbab] Response: 304 (6ms)
+[2025-12-13 08:49:52.158] [INFO] [89e31bec-cf3a-4fed-929a-98efeb96ec9b] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:49:52.170] [INFO] [89e31bec-cf3a-4fed-929a-98efeb96ec9b] Response: 201 (12ms)
+[2025-12-13 08:49:52.239] [INFO] [8983099f-b5c8-4257-a092-9caf8d40e8bf] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:49:52.244] [INFO] [8983099f-b5c8-4257-a092-9caf8d40e8bf] Response: 304 (5ms)
+[2025-12-13 08:50:06.741] [INFO] [06589438-3936-4993-91d3-6f38a270a558] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:50:06.760] [INFO] [06589438-3936-4993-91d3-6f38a270a558] Response: 201 (19ms)
+[2025-12-13 08:50:06.828] [INFO] [94c6386d-ba6c-43cb-88c1-ca039a06e766] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:50:06.833] [INFO] [94c6386d-ba6c-43cb-88c1-ca039a06e766] Response: 200 (5ms)
+[2025-12-13 08:50:27.212] [INFO] [654fc4c4-1ded-4c97-9b09-d4cad888ba37] ====== POST /api/v1/students/bulk ======
+[2025-12-13 08:50:27.232] [INFO] [654fc4c4-1ded-4c97-9b09-d4cad888ba37] Response: 201 (20ms)
+[2025-12-13 08:50:27.294] [INFO] [f8748052-7306-4805-88ed-32502ddecb52] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:50:27.299] [INFO] [f8748052-7306-4805-88ed-32502ddecb52] Response: 200 (5ms)
+[2025-12-13 08:50:30.891] [INFO] [0295a9ad-43bc-4865-9187-050d61741a72] ====== GET /api/v1/students?page=21&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:50:30.895] [INFO] [0295a9ad-43bc-4865-9187-050d61741a72] Response: 200 (4ms)
+[2025-12-13 08:50:32.343] [INFO] [07b7529b-3ff3-43b5-8741-f00b20120815] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:50:32.347] [INFO] [07b7529b-3ff3-43b5-8741-f00b20120815] Response: 304 (4ms)
+[2025-12-13 08:50:59.411] [INFO] [441b4f98-36f5-43a0-b27d-6b28bbf0abba] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:50:59.485] [INFO] [441b4f98-36f5-43a0-b27d-6b28bbf0abba] Response: 304 (74ms)
+[2025-12-13 08:51:27.260] [INFO] [bc9902f2-b705-4ba1-a60c-95a9aff9a7b3] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:51:27.279] [INFO] [bc9902f2-b705-4ba1-a60c-95a9aff9a7b3] Response: 304 (19ms)
+[2025-12-13 08:51:30.321] [INFO] [cd4a6519-55b2-415b-8355-04f6fac3a42d] ====== GET /api/v1/students?page=21&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:51:30.329] [INFO] [cd4a6519-55b2-415b-8355-04f6fac3a42d] Response: 304 (8ms)
+[2025-12-13 08:51:32.880] [INFO] [770dbfd9-7944-4d0f-821c-444a8ae255de] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:51:32.884] [INFO] [770dbfd9-7944-4d0f-821c-444a8ae255de] Response: 304 (4ms)
+[2025-12-13 08:51:41.350] [INFO] [dc406001-6be1-47cc-89ee-8e1b5f69b3cd] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:51:41.354] [ERROR] [dc406001-6be1-47cc-89ee-8e1b5f69b3cd] Error: finalQuery is not defined
+[2025-12-13 08:51:41.354] [ERROR] [dc406001-6be1-47cc-89ee-8e1b5f69b3cd] ReferenceError: finalQuery is not defined
+    at StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:453:25)
+    at /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:618:185
+    at /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:19
+    at apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4431)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:51:41.355] [INFO] [dc406001-6be1-47cc-89ee-8e1b5f69b3cd] Response: 500 (4ms)
+[2025-12-13 08:51:42.377] [INFO] [7c964ada-d2cd-4db2-8e17-3d16fd9b4049] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:51:42.379] [ERROR] [7c964ada-d2cd-4db2-8e17-3d16fd9b4049] Error: finalQuery is not defined
+[2025-12-13 08:51:42.380] [ERROR] [7c964ada-d2cd-4db2-8e17-3d16fd9b4049] ReferenceError: finalQuery is not defined
+    at StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:453:25)
+    at /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:618:185
+    at /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:19
+    at apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4431)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:51:42.381] [INFO] [7c964ada-d2cd-4db2-8e17-3d16fd9b4049] Response: 500 (2ms)
+[2025-12-13 08:53:19.140] [INFO] [ee6d5444-7c80-4d34-9f8f-16d9c45768d2] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:53:19.179] [INFO] [d2365390-22d5-426f-87f3-ff9c4095eb3d] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:53:19.185] [INFO] [ee6d5444-7c80-4d34-9f8f-16d9c45768d2] Response: 304 (45ms)
+[2025-12-13 08:53:19.191] [INFO] [d2365390-22d5-426f-87f3-ff9c4095eb3d] Response: 200 (12ms)
+[2025-12-13 08:53:39.646] [INFO] [f62f26a1-09ee-4fcd-b38a-b3dcaeb924fa] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:53:39.679] [INFO] [ef1e0d9a-79f7-4583-b842-6f14668d43a5] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:53:39.683] [INFO] [f62f26a1-09ee-4fcd-b38a-b3dcaeb924fa] Response: 304 (37ms)
+[2025-12-13 08:53:39.697] [INFO] [ef1e0d9a-79f7-4583-b842-6f14668d43a5] Response: 200 (18ms)
+[2025-12-13 08:53:45.118] [INFO] [6538eeef-147f-410a-bfff-c7dff04f913d] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:53:45.133] [INFO] [6538eeef-147f-410a-bfff-c7dff04f913d] Response: 304 (15ms)
+[2025-12-13 08:53:45.132] [INFO] [000693d6-f168-44d3-96c5-3a7f31aa7339] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:53:45.145] [ERROR] [000693d6-f168-44d3-96c5-3a7f31aa7339] Error: column students.nam does not exist
+[2025-12-13 08:53:45.146] [ERROR] [000693d6-f168-44d3-96c5-3a7f31aa7339] error: column students.nam does not exist
+    at /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/pg@8.16.3/node_modules/pg/lib/client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:90:49)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async SelectQueryBuilderImpl.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/select-query-builder.js:317:24)
+    at async StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:484:25)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:649:24
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+    at PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:102:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async SelectQueryBuilderImpl.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/select-query-builder.js:317:24)
+    at async StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:484:25)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:649:24
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:53:45.147] [INFO] [000693d6-f168-44d3-96c5-3a7f31aa7339] Response: 500 (13ms)
+[2025-12-13 08:53:46.295] [INFO] [499e7d1d-75c0-45b2-931e-622a5868b89a] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:53:46.297] [ERROR] [499e7d1d-75c0-45b2-931e-622a5868b89a] Error: column students.nam does not exist
+[2025-12-13 08:53:46.298] [ERROR] [499e7d1d-75c0-45b2-931e-622a5868b89a] error: column students.nam does not exist
+    at /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/pg@8.16.3/node_modules/pg/lib/client.js:545:17
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:90:49)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async SelectQueryBuilderImpl.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/select-query-builder.js:317:24)
+    at async StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:484:25)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:649:24
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+    at PostgresConnection.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/dialect/postgres/postgres-driver.js:102:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:35:28
+    at async DefaultConnectionProvider.provideConnection (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/driver/default-connection-provider.js:10:20)
+    at async DefaultQueryExecutor.executeQuery (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-executor/query-executor-base.js:34:16)
+    at async SelectQueryBuilderImpl.execute (file:///Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/kysely@0.28.8/node_modules/kysely/dist/esm/query-builder/select-query-builder.js:317:24)
+    at async StudentService.getStudents (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:484:25)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:649:24
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__b3aa2198._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_445301ab._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:53:46.298] [INFO] [499e7d1d-75c0-45b2-931e-622a5868b89a] Response: 500 (2ms)
+[2025-12-13 08:53:50.591] [INFO] [7485e462-3621-4356-ad96-96f16b8ad9a1] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:53:50.603] [INFO] [7485e462-3621-4356-ad96-96f16b8ad9a1] Response: 304 (12ms)
+[2025-12-13 08:53:50.622] [INFO] [24c24ba0-124e-4d94-891b-f82bbf06374b] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:53:50.628] [INFO] [24c24ba0-124e-4d94-891b-f82bbf06374b] Response: 200 (5ms)
+[2025-12-13 08:53:58.230] [INFO] [d3a12d36-b8a3-4287-83ed-95f0b473ae44] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:53:58.277] [INFO] [d3a12d36-b8a3-4287-83ed-95f0b473ae44] Response: 304 (48ms)
+[2025-12-13 08:53:58.275] [INFO] [e13a0158-eebf-455a-b5a2-f5cf34cc47c6] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:53:58.299] [INFO] [e13a0158-eebf-455a-b5a2-f5cf34cc47c6] Response: 200 (24ms)
+[2025-12-13 08:54:29.650] [INFO] [e1c7e0e9-6931-4ea1-b06c-644de3cd3c4b] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:54:29.714] [INFO] [d39a24ea-33a0-4666-a556-927a7c350257] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:54:29.719] [INFO] [e1c7e0e9-6931-4ea1-b06c-644de3cd3c4b] Response: 304 (69ms)
+[2025-12-13 08:54:29.727] [INFO] [d39a24ea-33a0-4666-a556-927a7c350257] Response: 200 (13ms)
+[2025-12-13 08:54:37.775] [INFO] [e104cdf6-49ed-44d2-94c7-6244049b344e] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:54:37.789] [INFO] [e104cdf6-49ed-44d2-94c7-6244049b344e] Response: 304 (14ms)
+[2025-12-13 08:54:37.816] [INFO] [6214adcf-9698-4b3d-9269-efbdec745db3] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:54:37.822] [INFO] [6214adcf-9698-4b3d-9269-efbdec745db3] Response: 200 (6ms)
+[2025-12-13 08:54:41.791] [INFO] [cd1bda21-40ca-4116-a5b9-5457241fffa8] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:54:41.793] [INFO] [cd1bda21-40ca-4116-a5b9-5457241fffa8] Response: 304 (2ms)
+[2025-12-13 08:54:41.814] [INFO] [73eff654-fdf8-4dd7-9085-70d7246afa82] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:54:41.818] [INFO] [73eff654-fdf8-4dd7-9085-70d7246afa82] Response: 200 (4ms)
+[2025-12-13 08:54:47.649] [INFO] [c44c7f38-8f37-4a9a-9f31-73c7eb25c106] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:54:47.664] [INFO] [c44c7f38-8f37-4a9a-9f31-73c7eb25c106] Response: 304 (15ms)
+[2025-12-13 08:54:47.681] [INFO] [2da3ac13-3d09-4d79-a254-ff192cecca76] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:54:47.689] [INFO] [2da3ac13-3d09-4d79-a254-ff192cecca76] Response: 200 (8ms)
+[2025-12-13 08:54:52.949] [INFO] [530c60b1-89b9-4f3e-9398-56d858f3478e] ====== POST /api/v1/students ======
+[2025-12-13 08:54:52.954] [INFO] [530c60b1-89b9-4f3e-9398-56d858f3478e] Response: 201 (5ms)
+[2025-12-13 08:54:53.073] [INFO] [bbd1b910-5740-4cbe-9f5e-915f11f1b3d0] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:54:53.076] [INFO] [bbd1b910-5740-4cbe-9f5e-915f11f1b3d0] Response: 200 (3ms)
+[2025-12-13 08:54:55.429] [INFO] [c87b9fb0-43ea-4471-a9fb-9789ad4898ef] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:54:55.432] [INFO] [c87b9fb0-43ea-4471-a9fb-9789ad4898ef] Response: 304 (3ms)
+[2025-12-13 08:54:55.437] [INFO] [17f3b14e-d146-4e11-81f4-1221c0f18b3d] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:54:55.438] [INFO] [17f3b14e-d146-4e11-81f4-1221c0f18b3d] Response: 304 (1ms)
+[2025-12-13 08:55:14.823] [INFO] [0880c22d-128b-4a5e-a12c-bdeb36e14491] ====== GET /api/v1/students?page=1&limit=10&search=&status=inactive&payment_status= ======
+[2025-12-13 08:55:14.838] [INFO] [0880c22d-128b-4a5e-a12c-bdeb36e14491] Response: 304 (15ms)
+[2025-12-13 08:55:18.140] [INFO] [063faf00-b8a0-4d5b-860b-eb9842c958f4] ====== GET /api/v1/students?page=1&limit=10&search=&status=active&payment_status= ======
+[2025-12-13 08:55:18.146] [INFO] [063faf00-b8a0-4d5b-860b-eb9842c958f4] Response: 200 (6ms)
+[2025-12-13 08:55:22.253] [INFO] [31960013-37f1-437c-9e21-49e1e05eaa7d] ====== GET /api/v1/students?page=1&limit=10&search=&status=inactive&payment_status= ======
+[2025-12-13 08:55:22.257] [INFO] [31960013-37f1-437c-9e21-49e1e05eaa7d] Response: 304 (4ms)
+[2025-12-13 08:55:34.386] [INFO] [2b577f3a-3996-4373-a553-a9c688f63778] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:55:34.404] [INFO] [2b577f3a-3996-4373-a553-a9c688f63778] Response: 304 (18ms)
+[2025-12-13 08:55:54.652] [INFO] [0926c838-f878-4058-9b60-e9e2b545afd6] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:55:54.677] [INFO] [0926c838-f878-4058-9b60-e9e2b545afd6] Response: 304 (25ms)
+[2025-12-13 08:56:00.448] [INFO] [5843666e-5658-44f2-99c6-1bf43cbf8387] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:56:00.452] [INFO] [5843666e-5658-44f2-99c6-1bf43cbf8387] Response: 304 (3ms)
+[2025-12-13 08:56:03.419] [INFO] [ea8123fa-8a3f-4bb2-ae27-f47b548fc335] ====== GET /api/v1/students/4cb280a9-567b-4640-8dbc-4af8b732d5cc ======
+[2025-12-13 08:56:03.426] [INFO] [ea8123fa-8a3f-4bb2-ae27-f47b548fc335] Response: 200 (7ms)
+[2025-12-13 08:56:04.876] [INFO] [06c8ce26-12c5-436f-b448-9dbc91ee80ec] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:56:04.878] [INFO] [06c8ce26-12c5-436f-b448-9dbc91ee80ec] Response: 304 (2ms)
+[2025-12-13 08:56:10.500] [INFO] [2300ccaa-6137-423e-8f3b-264593697b62] ====== PUT /api/v1/students/4cb280a9-567b-4640-8dbc-4af8b732d5cc ======
+[2025-12-13 08:56:10.507] [INFO] [2300ccaa-6137-423e-8f3b-264593697b62] Response: 200 (7ms)
+[2025-12-13 08:56:10.622] [INFO] [49d46811-d6b8-4d96-93ce-9bfe0a7b26ae] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:56:10.633] [INFO] [49d46811-d6b8-4d96-93ce-9bfe0a7b26ae] Response: 200 (11ms)
+[2025-12-13 08:56:16.521] [INFO] [3aed04b4-9336-4394-9289-7d10bdfd5f13] ====== GET /api/v1/students?page=1&limit=10&search=2024202&status=&payment_status= ======
+[2025-12-13 08:56:16.525] [INFO] [3aed04b4-9336-4394-9289-7d10bdfd5f13] Response: 200 (4ms)
+[2025-12-13 08:56:19.539] [INFO] [4a91e3ba-e47a-442e-b766-7efaaf513474] ====== GET /api/v1/students?page=1&limit=10&search=&status=&payment_status= ======
+[2025-12-13 08:56:19.541] [INFO] [09ce86c4-df86-4385-bd8c-bcef2286762b] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:56:19.544] [INFO] [4a91e3ba-e47a-442e-b766-7efaaf513474] Response: 304 (5ms)
+[2025-12-13 08:56:19.568] [INFO] [09ce86c4-df86-4385-bd8c-bcef2286762b] Response: 304 (27ms)
+[2025-12-13 08:56:19.585] [INFO] [ff163095-7427-4a97-ad99-cd00c0e60c0b] ====== GET /api/v1/students?page=1&limit=10&search=2024202&status=&payment_status= ======
+[2025-12-13 08:56:19.596] [INFO] [ff163095-7427-4a97-ad99-cd00c0e60c0b] Response: 304 (11ms)

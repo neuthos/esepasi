@@ -1,15 +1,14 @@
-export interface StudentSummary {
-  total_paid: number;
-  total_unpaid: number;
-}
+import {apiClient} from "./api.client";
 
 export interface Student {
   id: string;
   nis: string;
   name: string;
   status: "active" | "inactive";
-  created_at?: string;
-  summary: StudentSummary;
+  summary: {
+    total_paid: number;
+    total_unpaid: number;
+  };
 }
 
 export interface StudentHistoryItem {
@@ -18,140 +17,71 @@ export interface StudentHistoryItem {
   date: string;
   description: string;
   amount: number;
-  status?: string; // for bills
-  method?: string; // for payments
+  // Bill specific
+  status?: "pending" | "paid" | "cancelled";
+  // Payment specific
+  method?: string;
 }
 
 export interface StudentDetail {
-  student: Student;
+  student: {
+    id: string;
+    nis: string;
+    name: string;
+    status: "active" | "inactive";
+    created_at: string;
+  };
   history: StudentHistoryItem[];
 }
 
+export interface GetStudentsParams {
+  page: number;
+  limit: number;
+  search?: string;
+  status?: string;
+  payment_status?: string;
+}
+
 export interface CreateStudentPayload {
-  name: string;
   nis: string;
-  status: "active" | "inactive";
+  name: string;
+  status?: "active" | "inactive";
 }
 
-export interface BulkCreateStudentPayload {
-  students: {name: string; nis: string}[];
+export interface BulkCreatePayload {
+  students: {nis: string; name: string}[];
 }
-
-// Mock Data
-let MOCK_STUDENTS: Student[] = Array.from({length: 25}).map((_, i) => ({
-  id: `student-${i + 1}`,
-  nis: `2024${String(i + 1).padStart(3, "0")}`,
-  name: `Siswa ${i + 1}`,
-  status: i % 10 === 0 ? "inactive" : "active",
-  created_at: new Date(2024, 0, i + 1).toISOString(),
-  summary: {
-    total_paid: (i + 1) * 100000,
-    total_unpaid: (i % 3) * 50000,
-  },
-}));
 
 export const studentService = {
-  getStudents: async (params: {
-    page?: number;
-    limit?: number;
-    search?: string;
-    status?: string;
-    payment_status?: string;
-  }): Promise<{data: Student[]; total: number}> => {
-    await new Promise((resolve) => setTimeout(resolve, 800));
-
-    let filtered = [...MOCK_STUDENTS];
-
-    if (params.search) {
-      const lowerSearch = params.search.toLowerCase();
-      filtered = filtered.filter(
-        (s) =>
-          s.name.toLowerCase().includes(lowerSearch) ||
-          s.nis.includes(lowerSearch)
-      );
-    }
-
-    // Filter by Account Status (active/inactive)
-    if (params.status && params.status !== "all") {
-      filtered = filtered.filter((s) => s.status === params.status);
-    }
-
-    // Filter by Payment Status (lunas/belum_lunas)
-    if (params.payment_status && params.payment_status !== "all") {
-      if (params.payment_status === "lunas") {
-        filtered = filtered.filter((s) => s.summary.total_unpaid === 0);
-      } else if (params.payment_status === "belum_lunas") {
-        filtered = filtered.filter((s) => s.summary.total_unpaid > 0);
-      }
-    }
-
-    const start = ((params.page || 1) - 1) * (params.limit || 10);
-    const end = start + (params.limit || 10);
-
+  getStudents: async (
+    params: GetStudentsParams
+  ): Promise<{data: Student[]; total: number}> => {
+    const response = await apiClient.get("/students", {params});
     return {
-      data: filtered.slice(start, end),
-      total: filtered.length,
-    };
-  },
-
-  getStudentDetail: async (id: string): Promise<StudentDetail> => {
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    const student = MOCK_STUDENTS.find((s) => s.id === id);
-    if (!student) throw new Error("Student not found");
-
-    return {
-      student,
-      history: [
-        {
-          id: "bill-1",
-          type: "bill",
-          date: "2024-01-01",
-          description: "SPP Januari 2024",
-          amount: 150000,
-          status: "paid",
-        },
-        {
-          id: "pay-1",
-          type: "payment",
-          date: "2024-01-05",
-          description: "Pembayaran SPP Januari",
-          amount: 150000,
-          method: "transfer",
-        },
-        {
-          id: "bill-2",
-          type: "bill",
-          date: "2024-02-01",
-          description: "SPP Februari 2024",
-          amount: 150000,
-          status: "pending",
-        },
-      ],
+      data: response.data.data,
+      total: response.data.meta.total,
     };
   },
 
   createStudent: async (payload: CreateStudentPayload): Promise<void> => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    const newStudent: Student = {
-      id: `student-${MOCK_STUDENTS.length + 1}`,
-      ...payload,
-      created_at: new Date().toISOString(),
-      summary: {total_paid: 0, total_unpaid: 0},
-    };
-    MOCK_STUDENTS = [newStudent, ...MOCK_STUDENTS];
+    await apiClient.post("/students", payload);
   },
 
-  bulkCreateStudents: async (
-    payload: BulkCreateStudentPayload
+  bulkCreateStudents: async (payload: BulkCreatePayload): Promise<void> => {
+    return apiClient.post("/students/bulk", payload);
+  },
+
+  getStudentDetail: async (id: string): Promise<StudentDetail> => {
+    const response = await apiClient.get<{data: StudentDetail}>(
+      `/students/${id}`
+    );
+    return response.data.data;
+  },
+
+  updateStudent: async (
+    id: string,
+    payload: Partial<CreateStudentPayload>
   ): Promise<void> => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    const newStudents = payload.students.map((s, i) => ({
-      id: `student-${MOCK_STUDENTS.length + i + 1}`,
-      ...s,
-      status: "active" as const,
-      created_at: new Date().toISOString(),
-      summary: {total_paid: 0, total_unpaid: 0},
-    }));
-    MOCK_STUDENTS = [...newStudents, ...MOCK_STUDENTS];
+    await apiClient.put(`/students/${id}`, payload);
   },
 };

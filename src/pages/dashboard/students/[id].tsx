@@ -4,7 +4,6 @@ import {
   Card,
   Descriptions,
   Avatar,
-  Typography,
   Tabs,
   Tag,
   List,
@@ -69,14 +68,18 @@ export default function StudentDetailPage() {
                   />
                 }
                 title={item.description}
-                description={item.date}
+                description={new Date(item.date).toLocaleDateString("id-ID", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
               />
               <div className="text-right">
                 <div className="font-semibold">
                   Rp {item.amount.toLocaleString("id-ID")}
                 </div>
                 <Tag color={item.status === "paid" ? "success" : "warning"}>
-                  {item.status?.toUpperCase()}
+                  {(item.status || "pending").toUpperCase()}
                 </Tag>
               </div>
             </List.Item>
@@ -105,7 +108,9 @@ export default function StudentDetailPage() {
                   />
                 }
                 title={item.description}
-                description={`${item.date} • ${item.method?.toUpperCase()}`}
+                description={`${new Date(item.date).toLocaleDateString(
+                  "id-ID"
+                )} • ${item.method?.toUpperCase() || "MANUAL"}`}
               />
               <div className="text-right">
                 <div className="font-semibold text-green-600">
@@ -123,7 +128,7 @@ export default function StudentDetailPage() {
   return (
     <DashboardLayout>
       <Head>
-        <title>{student.name} | SchoolPay</title>
+        <title>{student.name} | ESepasi</title>
       </Head>
 
       <div className="space-y-6">
@@ -133,6 +138,7 @@ export default function StudentDetailPage() {
         >
           <ArrowLeftOutlined /> Kembali ke Daftar Siswa
         </Link>
+        {/* ... Rest of JSX same as below ... */}
 
         <Card className="shadow-sm">
           <Row gutter={[32, 32]}>
