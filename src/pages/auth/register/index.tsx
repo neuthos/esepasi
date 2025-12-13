@@ -19,7 +19,7 @@ const {Title, Text} = Typography;
 
 export default function RegisterPage() {
   const router = useRouter();
-  const {isAuthenticated, user, loading} = useAuth();
+  const {isAuthenticated, user, loading, login} = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
@@ -43,12 +43,11 @@ export default function RegisterPage() {
       authService.register(values.name, values.email, values.password),
     onSuccess: (data) => {
       message.success("Akun berhasil dibuat! Silakan lengkapi data sekolah.");
-      localStorage.setItem("token", data.token);
+      login(data.token, data.user);
       setCurrentStep(1);
     },
   });
 
-  // Step 2: Register School
   const registerSchoolMutation = useMutation({
     mutationFn: (values: any) =>
       authService.registerSchool(
@@ -56,8 +55,13 @@ export default function RegisterPage() {
         values.address,
         values.phone
       ),
-    onSuccess: () => {
+    onSuccess: (data: any) => {
       message.success("Sekolah berhasil didaftarkan!");
+
+      if (data.data?.token && user) {
+        login(data.data.token, {...user, school_id: data.data.school.id});
+      }
+
       router.push("/dashboard");
     },
   });

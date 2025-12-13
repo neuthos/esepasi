@@ -1070,3 +1070,230 @@
 [2025-12-13 07:47:16.255] [INFO] [55a9517d-cb1d-4a46-8a35-bb29b874aaa4] Response: 304 (6ms)
 [2025-12-13 07:47:41.714] [INFO] [bdacd6eb-952c-4a65-9af2-0b3dc01219cb] ====== GET /api/v1/school ======
 [2025-12-13 07:47:41.728] [INFO] [bdacd6eb-952c-4a65-9af2-0b3dc01219cb] Response: 304 (14ms)
+[2025-12-13 07:55:32.486] [INFO] [4516cd77-b1ad-475e-8e27-68a1c775d6d0] ====== GET /api/v1/school ======
+[2025-12-13 07:55:32.495] [INFO] [4516cd77-b1ad-475e-8e27-68a1c775d6d0] Response: 304 (10ms)
+[2025-12-13 07:57:32.456] [INFO] [0fb87076-1a08-4969-8b3f-0920d38089ff] ====== GET /api/v1/school ======
+[2025-12-13 07:57:32.475] [INFO] [0fb87076-1a08-4969-8b3f-0920d38089ff] Response: 304 (19ms)
+[2025-12-13 07:59:27.935] [INFO] [478337cd-e448-486d-97c4-4ff00865d61d] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:59:27.968] [INFO] [478337cd-e448-486d-97c4-4ff00865d61d] Response: 304 (33ms)
+[2025-12-13 07:59:30.797] [INFO] [f4d36e26-a83d-4fc5-9a75-91f39b989b0e] ====== GET /api/v1/users ======
+[2025-12-13 07:59:30.797] [INFO] [f4d36e26-a83d-4fc5-9a75-91f39b989b0e] Response: 400 (0ms)
+[2025-12-13 07:59:31.815] [INFO] [faac512b-394a-492b-96d6-a32d8a3e11d7] ====== GET /api/v1/users ======
+[2025-12-13 07:59:31.817] [INFO] [faac512b-394a-492b-96d6-a32d8a3e11d7] Response: 400 (2ms)
+[2025-12-13 07:59:33.141] [INFO] [6823d356-b45e-4b01-890f-7d7c297d31a7] ====== GET /api/v1/users ======
+[2025-12-13 07:59:33.142] [INFO] [6823d356-b45e-4b01-890f-7d7c297d31a7] Response: 400 (1ms)
+[2025-12-13 07:59:33.145] [INFO] [7b6c04f3-e639-4251-b54b-73af5a7d87f7] ====== GET /api/v1/auth/me ======
+[2025-12-13 07:59:33.147] [INFO] [7b6c04f3-e639-4251-b54b-73af5a7d87f7] Response: 304 (2ms)
+[2025-12-13 07:59:34.155] [INFO] [37dcc647-a852-4550-ad74-4e457c0b6132] ====== GET /api/v1/users ======
+[2025-12-13 07:59:34.158] [INFO] [37dcc647-a852-4550-ad74-4e457c0b6132] Response: 400 (3ms)
+[2025-12-13 08:04:30.599] [INFO] [af0fa4b6-1b6b-4421-9802-4716300e01de] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:04:30.672] [INFO] [af0fa4b6-1b6b-4421-9802-4716300e01de] Response: 200 (73ms)
+[2025-12-13 08:04:35.514] [INFO] [e7ceb89d-be5f-4b24-b20f-a07134a7e8f7] ====== GET /api/v1/users ======
+[2025-12-13 08:04:35.517] [INFO] [e7ceb89d-be5f-4b24-b20f-a07134a7e8f7] Response: 200 (3ms)
+[2025-12-13 08:04:41.373] [INFO] [ecd946d8-1608-40bd-9956-283f04167c90] ====== GET /api/v1/school ======
+[2025-12-13 08:04:41.374] [INFO] [ecd946d8-1608-40bd-9956-283f04167c90] Response: 200 (1ms)
+[2025-12-13 08:04:44.931] [INFO] [9151a460-1cb3-4a8a-9df4-f0f132bdb73b] ====== PUT /api/v1/school ======
+[2025-12-13 08:04:44.940] [INFO] [9151a460-1cb3-4a8a-9df4-f0f132bdb73b] Response: 200 (8ms)
+[2025-12-13 08:04:44.974] [INFO] [ce2dfa60-8d3c-426b-8847-52e7edd98703] ====== GET /api/v1/school ======
+[2025-12-13 08:04:44.975] [INFO] [ce2dfa60-8d3c-426b-8847-52e7edd98703] Response: 200 (1ms)
+[2025-12-13 08:05:08.417] [INFO] [d106fcde-2c08-4921-9882-f7d222fc3a3f] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:05:08.435] [ERROR] [d106fcde-2c08-4921-9882-f7d222fc3a3f] Error: Email atau password salah
+[2025-12-13 08:05:08.436] [ERROR] [d106fcde-2c08-4921-9882-f7d222fc3a3f] UnauthorizedError: Email atau password salah
+    at AuthService.login (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__11d6d2b1._.js:628:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__11d6d2b1._.js:709:20
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_4d75f5da._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:05:08.437] [INFO] [d106fcde-2c08-4921-9882-f7d222fc3a3f] Response: 401 (17ms)
+[2025-12-13 08:05:13.467] [INFO] [7a3bf4f7-e287-480d-94d7-2d5acc4ed10f] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:05:13.535] [ERROR] [7a3bf4f7-e287-480d-94d7-2d5acc4ed10f] Error: Email atau password salah
+[2025-12-13 08:05:13.535] [ERROR] [7a3bf4f7-e287-480d-94d7-2d5acc4ed10f] UnauthorizedError: Email atau password salah
+    at AuthService.login (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__11d6d2b1._.js:635:19)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__11d6d2b1._.js:709:20
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_4d75f5da._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:05:13.535] [INFO] [7a3bf4f7-e287-480d-94d7-2d5acc4ed10f] Response: 401 (67ms)
+[2025-12-13 08:05:20.103] [INFO] [c0f37a4a-313c-4354-a4e9-36535a95b822] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:05:20.176] [INFO] [c0f37a4a-313c-4354-a4e9-36535a95b822] Response: 200 (73ms)
+[2025-12-13 08:05:25.975] [INFO] [601e5154-325a-41ce-818c-ccb0304a6741] ====== GET /api/v1/school ======
+[2025-12-13 08:05:25.977] [INFO] [601e5154-325a-41ce-818c-ccb0304a6741] Response: 304 (3ms)
+[2025-12-13 08:05:30.084] [INFO] [14089ce8-cb8f-43c2-ad16-533e7fb88ea2] ====== PUT /api/v1/school ======
+[2025-12-13 08:05:30.090] [INFO] [14089ce8-cb8f-43c2-ad16-533e7fb88ea2] Response: 200 (6ms)
+[2025-12-13 08:05:30.123] [INFO] [b0610b10-5afe-41b0-932f-64e02b6f8512] ====== GET /api/v1/school ======
+[2025-12-13 08:05:30.124] [INFO] [b0610b10-5afe-41b0-932f-64e02b6f8512] Response: 200 (1ms)
+[2025-12-13 08:05:31.385] [INFO] [89ff3b78-0cdb-4d4b-b40c-9d5f5334f610] ====== GET /api/v1/users ======
+[2025-12-13 08:05:31.388] [INFO] [89ff3b78-0cdb-4d4b-b40c-9d5f5334f610] Response: 304 (3ms)
+[2025-12-13 08:05:32.606] [INFO] [a46e757f-be44-4aae-933c-0c76b82931be] ====== GET /api/v1/users ======
+[2025-12-13 08:05:32.611] [INFO] [a46e757f-be44-4aae-933c-0c76b82931be] Response: 304 (5ms)
+[2025-12-13 08:05:32.648] [INFO] [bea2f0e4-a822-4896-8778-2ed0e38df257] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:05:32.651] [INFO] [bea2f0e4-a822-4896-8778-2ed0e38df257] Response: 200 (3ms)
+[2025-12-13 08:06:20.703] [INFO] [c0104408-526a-4c83-8a81-ba2375de8e93] ====== GET /api/v1/users ======
+[2025-12-13 08:06:20.714] [INFO] [c0104408-526a-4c83-8a81-ba2375de8e93] Response: 304 (12ms)
+[2025-12-13 08:06:25.425] [INFO] [8d4d9482-ff6e-445f-aaa5-8cb271b28cc9] ====== GET /api/v1/users ======
+[2025-12-13 08:06:25.427] [INFO] [8d4d9482-ff6e-445f-aaa5-8cb271b28cc9] Response: 304 (2ms)
+[2025-12-13 08:09:06.332] [INFO] [4059c069-9232-44bd-bdf5-90a70d279f47] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:09:06.334] [INFO] [abeed4eb-5c0b-480e-9b50-f491a665c3f5] ====== GET /api/v1/users ======
+[2025-12-13 08:09:06.369] [INFO] [4059c069-9232-44bd-bdf5-90a70d279f47] Response: 304 (37ms)
+[2025-12-13 08:09:06.370] [INFO] [abeed4eb-5c0b-480e-9b50-f491a665c3f5] Response: 304 (36ms)
+[2025-12-13 08:09:34.127] [INFO] [33838bf8-9ba9-4acb-a5d9-0a8a112330c9] ====== POST /api/v1/users ======
+[2025-12-13 08:09:34.206] [INFO] [33838bf8-9ba9-4acb-a5d9-0a8a112330c9] Response: 201 (79ms)
+[2025-12-13 08:09:34.211] [INFO] [e0de021f-7222-4b87-b387-16b4ef6cbadb] ====== GET /api/v1/users ======
+[2025-12-13 08:09:34.212] [INFO] [e0de021f-7222-4b87-b387-16b4ef6cbadb] Response: 200 (1ms)
+[2025-12-13 08:10:02.611] [INFO] [75f91187-743b-4c87-afa1-b8f6c982a7b3] ====== GET /api/v1/users ======
+[2025-12-13 08:10:02.624] [INFO] [75f91187-743b-4c87-afa1-b8f6c982a7b3] Response: 304 (13ms)
+[2025-12-13 08:10:17.512] [INFO] [6b28c9c3-f76f-4576-933d-38fd363fbd4e] ====== GET /api/v1/users ======
+[2025-12-13 08:10:17.523] [INFO] [6b28c9c3-f76f-4576-933d-38fd363fbd4e] Response: 304 (11ms)
+[2025-12-13 08:10:40.854] [INFO] [5782b443-e452-4c11-86df-4144119cd727] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:10:40.969] [INFO] [5782b443-e452-4c11-86df-4144119cd727] Response: 200 (115ms)
+[2025-12-13 08:10:44.949] [INFO] [e5715e6d-c3ed-4c9a-92fa-ea8eeb3ab06f] ====== GET /api/v1/school ======
+[2025-12-13 08:10:44.952] [INFO] [e5715e6d-c3ed-4c9a-92fa-ea8eeb3ab06f] Response: 304 (3ms)
+[2025-12-13 08:10:45.372] [INFO] [85f430eb-b37e-4bc8-bcaf-5aa9c5b2166d] ====== GET /api/v1/users ======
+[2025-12-13 08:10:45.374] [INFO] [85f430eb-b37e-4bc8-bcaf-5aa9c5b2166d] Response: 304 (2ms)
+[2025-12-13 08:10:56.662] [INFO] [b0c16784-7fe3-46f8-b75e-d623a8ebf8e1] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:10:56.742] [INFO] [b0c16784-7fe3-46f8-b75e-d623a8ebf8e1] Response: 200 (80ms)
+[2025-12-13 08:11:03.658] [INFO] [33635e20-1c39-4237-b09b-6664e7e78364] ====== GET /api/v1/users ======
+[2025-12-13 08:11:03.660] [INFO] [33635e20-1c39-4237-b09b-6664e7e78364] Response: 304 (2ms)
+[2025-12-13 08:11:06.976] [INFO] [65edb6ec-1efe-45d2-b476-31e431c2a24c] ====== PUT /api/v1/users/eb4ceb10-7963-4fc3-bc54-b7155f64f9a6 ======
+[2025-12-13 08:11:06.982] [INFO] [65edb6ec-1efe-45d2-b476-31e431c2a24c] Response: 200 (6ms)
+[2025-12-13 08:11:07.008] [INFO] [b6297d9b-faf1-4133-a198-3f556f48bef6] ====== GET /api/v1/users ======
+[2025-12-13 08:11:07.009] [INFO] [b6297d9b-faf1-4133-a198-3f556f48bef6] Response: 200 (1ms)
+[2025-12-13 08:11:15.404] [INFO] [6be93aef-0946-4aa3-b5a8-1f0436821596] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:11:15.405] [ERROR] [6be93aef-0946-4aa3-b5a8-1f0436821596] Error: Akun tidak aktif. Silakan hubungi administrator.
+[2025-12-13 08:11:15.405] [ERROR] [6be93aef-0946-4aa3-b5a8-1f0436821596] UnauthorizedError: Akun tidak aktif. Silakan hubungi administrator.
+    at AuthService.login (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__11d6d2b1._.js:631:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__11d6d2b1._.js:709:20
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__a21b4811._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_4d75f5da._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:11:15.406] [INFO] [6be93aef-0946-4aa3-b5a8-1f0436821596] Response: 401 (1ms)
+[2025-12-13 08:11:20.144] [INFO] [e30fbc7d-bfeb-495c-8c14-6d7d32dc7402] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:11:20.223] [INFO] [e30fbc7d-bfeb-495c-8c14-6d7d32dc7402] Response: 200 (79ms)
+[2025-12-13 08:11:23.220] [INFO] [62cd2932-8dd3-4939-a4c2-d15bd1cd970b] ====== GET /api/v1/school ======
+[2025-12-13 08:11:23.223] [INFO] [62cd2932-8dd3-4939-a4c2-d15bd1cd970b] Response: 304 (3ms)
+[2025-12-13 08:11:23.771] [INFO] [cc141344-c0e2-41ad-93fd-58146fa183ae] ====== GET /api/v1/users ======
+[2025-12-13 08:11:23.772] [INFO] [cc141344-c0e2-41ad-93fd-58146fa183ae] Response: 304 (1ms)
+[2025-12-13 08:11:25.372] [INFO] [647d72a9-9e76-4dde-9cb1-a9369673c39a] ====== PUT /api/v1/users/eb4ceb10-7963-4fc3-bc54-b7155f64f9a6 ======
+[2025-12-13 08:11:25.375] [INFO] [647d72a9-9e76-4dde-9cb1-a9369673c39a] Response: 200 (3ms)
+[2025-12-13 08:11:25.422] [INFO] [23051a36-74f8-468f-99d5-76f18f335207] ====== GET /api/v1/users ======
+[2025-12-13 08:11:25.423] [INFO] [23051a36-74f8-468f-99d5-76f18f335207] Response: 200 (1ms)
+[2025-12-13 08:11:33.005] [INFO] [97764e5f-8267-42bb-86bd-2f940fe0c198] ====== PUT /api/v1/users/eb4ceb10-7963-4fc3-bc54-b7155f64f9a6 ======
+[2025-12-13 08:11:33.008] [INFO] [97764e5f-8267-42bb-86bd-2f940fe0c198] Response: 200 (3ms)
+[2025-12-13 08:11:33.059] [INFO] [29bb1893-79fc-4209-b875-8e782a752675] ====== GET /api/v1/users ======
+[2025-12-13 08:11:33.060] [INFO] [29bb1893-79fc-4209-b875-8e782a752675] Response: 304 (1ms)
+[2025-12-13 08:11:36.964] [INFO] [bb511d11-5fd4-4e69-981a-a0ef697c1c58] ====== PUT /api/v1/users/eb4ceb10-7963-4fc3-bc54-b7155f64f9a6 ======
+[2025-12-13 08:11:36.966] [INFO] [bb511d11-5fd4-4e69-981a-a0ef697c1c58] Response: 200 (2ms)
+[2025-12-13 08:11:37.022] [INFO] [752dfb1f-86b0-4fb8-85d5-9cbf7f2e40a7] ====== GET /api/v1/users ======
+[2025-12-13 08:11:37.023] [INFO] [752dfb1f-86b0-4fb8-85d5-9cbf7f2e40a7] Response: 200 (1ms)
+[2025-12-13 08:11:51.743] [INFO] [2181d590-cf8b-42ca-8d52-bc7fa0e44a36] ====== POST /api/v1/users ======
+[2025-12-13 08:11:51.836] [INFO] [2181d590-cf8b-42ca-8d52-bc7fa0e44a36] Response: 201 (93ms)
+[2025-12-13 08:11:51.840] [INFO] [37f57724-5b51-4e38-b170-303560f17c2f] ====== GET /api/v1/users ======
+[2025-12-13 08:11:51.842] [INFO] [37f57724-5b51-4e38-b170-303560f17c2f] Response: 200 (2ms)
+[2025-12-13 08:11:57.936] [INFO] [ac0c363b-31af-4832-924e-ca7c1477b1c4] ====== POST /api/v1/users ======
+[2025-12-13 08:11:57.938] [ERROR] [ac0c363b-31af-4832-924e-ca7c1477b1c4] Error: Email sudah terdaftar
+[2025-12-13 08:11:57.938] [ERROR] [ac0c363b-31af-4832-924e-ca7c1477b1c4] ConflictError: Email sudah terdaftar
+    at UserService.createUser (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__9c4cfcce._.js:460:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__9c4cfcce._.js:584:9
+    at async /Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/[root-of-the-server]__9c4cfcce._.js:245:13
+    at async apiResolver (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:4425)
+    at async PagesAPIRouteModule.render (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js:2:5955)
+    at async Module.handler (/Users/galangkeda/Documents/EPadi/esepasi/.next/dev/server/chunks/718e3_next_dist_dead01aa._.js:2935:13)
+    at async DevServer.runApi (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:750:9)
+    at async NextNodeServer.handleCatchallRenderRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/next-server.js:391:37)
+    at async DevServer.handleRequestImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/base-server.js:912:17)
+    at async /Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:382:20
+    at async Span.traceAsyncFn (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/trace/trace.js:157:20)
+    at async DevServer.handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/dev/next-dev-server.js:378:24)
+    at async invokeRender (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:240:21)
+    at async handleRequest (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:436:24)
+    at async requestHandlerImpl (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/router-server.js:484:13)
+    at async Server.requestListener (/Users/galangkeda/Documents/EPadi/esepasi/node_modules/.pnpm/next@16.0.8_@babel+core@7.28.5_react-dom@19.2.1_react@19.2.1__react@19.2.1/node_modules/next/dist/server/lib/start-server.js:226:13)
+[2025-12-13 08:11:57.939] [INFO] [ac0c363b-31af-4832-924e-ca7c1477b1c4] Response: 409 (2ms)
+[2025-12-13 08:12:02.850] [INFO] [70f74ca0-8619-47fc-8ee9-a14246fb0027] ====== POST /api/v1/users ======
+[2025-12-13 08:12:02.919] [INFO] [70f74ca0-8619-47fc-8ee9-a14246fb0027] Response: 201 (69ms)
+[2025-12-13 08:12:02.924] [INFO] [103b8e67-d31b-4b58-89ee-5f4bec934d15] ====== GET /api/v1/users ======
+[2025-12-13 08:12:02.927] [INFO] [103b8e67-d31b-4b58-89ee-5f4bec934d15] Response: 200 (3ms)
+[2025-12-13 08:12:10.528] [INFO] [cfa408a7-9f6c-4b8d-adbf-914262ff7873] ====== POST /api/v1/users ======
+[2025-12-13 08:12:10.606] [INFO] [cfa408a7-9f6c-4b8d-adbf-914262ff7873] Response: 201 (77ms)
+[2025-12-13 08:12:10.613] [INFO] [008c7908-8c53-47ea-bc60-400ef779171f] ====== GET /api/v1/users ======
+[2025-12-13 08:12:10.614] [INFO] [008c7908-8c53-47ea-bc60-400ef779171f] Response: 200 (1ms)
+[2025-12-13 08:12:17.455] [INFO] [11c62e13-278f-4f82-8f60-6ef04cc3f1b7] ====== POST /api/v1/users ======
+[2025-12-13 08:12:17.519] [INFO] [11c62e13-278f-4f82-8f60-6ef04cc3f1b7] Response: 201 (64ms)
+[2025-12-13 08:12:17.527] [INFO] [786f5d20-81b5-45cd-b49a-e30f5b12ba85] ====== GET /api/v1/users ======
+[2025-12-13 08:12:17.529] [INFO] [786f5d20-81b5-45cd-b49a-e30f5b12ba85] Response: 200 (2ms)
+[2025-12-13 08:12:22.969] [INFO] [dd410d46-5620-4004-9895-00bf89f04269] ====== GET /api/v1/users ======
+[2025-12-13 08:12:22.971] [INFO] [e3360780-b12b-4baa-9dfa-f2bebdddcc54] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:12:22.974] [INFO] [dd410d46-5620-4004-9895-00bf89f04269] Response: 304 (5ms)
+[2025-12-13 08:12:22.985] [INFO] [e3360780-b12b-4baa-9dfa-f2bebdddcc54] Response: 304 (14ms)
+[2025-12-13 08:12:30.268] [INFO] [74be961a-11f2-4735-8361-20a2b44f4323] ====== GET /api/v1/school ======
+[2025-12-13 08:12:30.272] [INFO] [74be961a-11f2-4735-8361-20a2b44f4323] Response: 304 (4ms)
+[2025-12-13 08:12:30.976] [INFO] [82c11658-d6d3-49fe-9d25-dc3873a77e82] ====== GET /api/v1/users ======
+[2025-12-13 08:12:30.978] [INFO] [82c11658-d6d3-49fe-9d25-dc3873a77e82] Response: 304 (2ms)
+[2025-12-13 08:12:32.798] [INFO] [08215417-a0ca-4ad1-aec8-211e522098c5] ====== GET /api/v1/school ======
+[2025-12-13 08:12:32.800] [INFO] [08215417-a0ca-4ad1-aec8-211e522098c5] Response: 304 (2ms)
+[2025-12-13 08:12:33.520] [INFO] [dbe5eeef-1b82-4a59-8cb2-b62aa68d86ce] ====== GET /api/v1/users ======
+[2025-12-13 08:12:33.522] [INFO] [dbe5eeef-1b82-4a59-8cb2-b62aa68d86ce] Response: 304 (2ms)
+[2025-12-13 08:12:42.385] [INFO] [71c923c2-22fa-48ac-9f45-2629daefdec1] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:12:42.454] [INFO] [71c923c2-22fa-48ac-9f45-2629daefdec1] Response: 200 (69ms)
+[2025-12-13 08:14:29.817] [INFO] [2fd49df9-c3a7-4183-b954-fc5c1cdc5f32] ====== POST /api/v1/auth/login ======
+[2025-12-13 08:14:29.901] [INFO] [2fd49df9-c3a7-4183-b954-fc5c1cdc5f32] Response: 200 (84ms)
+[2025-12-13 08:14:30.859] [INFO] [91db3b6e-198c-440e-8909-f09dc83ced53] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:14:30.862] [INFO] [91db3b6e-198c-440e-8909-f09dc83ced53] Response: 304 (2ms)
+[2025-12-13 08:14:32.322] [INFO] [a726830a-a2ae-4190-98e4-46346b01c256] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:14:32.324] [INFO] [a726830a-a2ae-4190-98e4-46346b01c256] Response: 304 (2ms)
+[2025-12-13 08:14:33.711] [INFO] [67ead40e-5d93-4b3c-aea6-8baef620a731] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:14:33.712] [INFO] [67ead40e-5d93-4b3c-aea6-8baef620a731] Response: 304 (1ms)
+[2025-12-13 08:14:39.996] [INFO] [04b89556-8213-4e68-a30b-73de4e2cf81e] ====== GET /api/v1/auth/me ======
+[2025-12-13 08:14:40.001] [INFO] [04b89556-8213-4e68-a30b-73de4e2cf81e] Response: 304 (6ms)
+[2025-12-13 08:14:45.766] [INFO] [e369bb43-f798-484a-832c-0be88c666937] ====== GET /api/v1/school ======
+[2025-12-13 08:14:45.769] [INFO] [e369bb43-f798-484a-832c-0be88c666937] Response: 304 (3ms)
+[2025-12-13 08:14:46.353] [INFO] [0a41f14e-689f-4afa-a576-7b0bb82077d8] ====== GET /api/v1/users ======
+[2025-12-13 08:14:46.357] [INFO] [0a41f14e-689f-4afa-a576-7b0bb82077d8] Response: 304 (4ms)
+[2025-12-13 08:14:48.640] [INFO] [87390f01-f1a8-415c-94ed-63b1ff26c754] ====== PUT /api/v1/users/2915b2d3-10c5-4547-9f23-123a42eafb86 ======
+[2025-12-13 08:14:48.646] [INFO] [87390f01-f1a8-415c-94ed-63b1ff26c754] Response: 200 (6ms)
+[2025-12-13 08:14:48.713] [INFO] [8e385ca2-86ed-4c7c-9efb-5588a2cf11d1] ====== GET /api/v1/users ======
+[2025-12-13 08:14:48.715] [INFO] [8e385ca2-86ed-4c7c-9efb-5588a2cf11d1] Response: 200 (2ms)
+[2025-12-13 08:14:59.235] [INFO] [b6952896-6d59-4749-abce-38b2f4961ac5] ====== DELETE /api/v1/users/b733ce95-38b6-400f-a810-3e0e0d194aef ======
+[2025-12-13 08:14:59.252] [INFO] [b6952896-6d59-4749-abce-38b2f4961ac5] Response: 200 (17ms)
+[2025-12-13 08:14:59.307] [INFO] [eac1c01f-f567-4a69-a0f2-b3655c694002] ====== GET /api/v1/users ======
+[2025-12-13 08:14:59.309] [INFO] [eac1c01f-f567-4a69-a0f2-b3655c694002] Response: 200 (2ms)
+[2025-12-13 08:15:04.608] [INFO] [ab820ff1-978b-4d19-820f-6b85dfe6d668] ====== GET /api/v1/school ======
+[2025-12-13 08:15:04.610] [INFO] [ab820ff1-978b-4d19-820f-6b85dfe6d668] Response: 304 (2ms)
+[2025-12-13 08:15:05.566] [INFO] [c9bd87de-1077-4e76-80b5-3d031a49b46a] ====== GET /api/v1/users ======
+[2025-12-13 08:15:05.568] [INFO] [c9bd87de-1077-4e76-80b5-3d031a49b46a] Response: 304 (2ms)

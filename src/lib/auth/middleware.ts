@@ -30,10 +30,9 @@ export const requireAuth = (req: NextApiRequest): JWTPayload => {
     );
   }
 
-  const token = authHeader.substring(7); // Remove 'Bearer ' prefix
+  const token = authHeader.substring(7);
   const user = verifyToken(token);
 
-  // Attach to request for later use
   req.user = user;
 
   return user;

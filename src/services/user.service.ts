@@ -7,57 +7,55 @@ export interface AdminUser {
   role: string;
 }
 
+import {apiClient} from "./api.client";
+
+export interface AdminUser {
+  id: string;
+  name: string;
+  email: string;
+  is_active: boolean;
+  is_super_admin: boolean;
+  role: string;
+}
+
 export interface CreateUserPayload {
   name: string;
   email: string;
+  password?: string;
 }
 
-// Mock Data
-const MOCK_USERS: AdminUser[] = [
-  {
-    id: "user-1",
-    name: "Galang Keda (You)",
-    email: "admin@sekolah.com",
-    is_active: true,
-    is_super_admin: true,
-    role: "Super Admin",
-  },
-  {
-    id: "user-2",
-    name: "Staff TU",
-    email: "tu@sekolah.com",
-    is_active: true,
-    is_super_admin: false,
-    role: "Admin",
-  },
-  {
-    id: "user-3",
-    name: "Kepala Sekolah",
-    email: "kepsek@sekolah.com",
-    is_active: true,
-    is_super_admin: false,
-    role: "Admin",
-  },
-];
+export interface UpdateUserPayload {
+  name?: string;
+  email?: string;
+  password?: string;
+  is_active?: boolean;
+}
 
 export const userService = {
   getUsers: async (): Promise<AdminUser[]> => {
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    return MOCK_USERS;
+    const response = await apiClient.get("/users");
+    // Transform or map if necessary, but backend should return compatible structure
+    // Backend returns `is_super_admin`, frontend expects it. `role` might need derivation if not in DB.
+    // Our userService backend returns flat user object. We might need to map `role` manually or just use `is_super_admin`.
+    return response.data.data.map((u: any) => ({
+      ...u,
+      role: u.is_super_admin ? "Super Admin" : "Admin",
+    }));
   },
 
   createUser: async (payload: CreateUserPayload): Promise<void> => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Create User:", payload);
+    await apiClient.post("/users", payload);
+  },
+
+  updateUser: async (id: string, payload: UpdateUserPayload): Promise<void> => {
+    await apiClient.put(`/users/${id}`, payload);
   },
 
   updateUserStatus: async (id: string, isActive: boolean): Promise<void> => {
-    await new Promise((resolve) => setTimeout(resolve, 500));
-    console.log(`Update user ${id} status to ${isActive}`);
+    await apiClient.put(`/users/${id}`, {is_active: isActive});
   },
 
   deleteUser: async (id: string): Promise<void> => {
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    console.log(`Delete user ${id}`);
+    await apiClient.delete(`/users/${id}`);
   },
 };

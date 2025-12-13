@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Head from "next/head";
 import {useQuery, useMutation, useQueryClient} from "@tanstack/react-query";
 import {
@@ -19,37 +20,52 @@ import {
   CheckCircleOutlined,
   StopOutlined,
   UserOutlined,
+  EditOutlined,
 } from "@ant-design/icons";
 import DashboardLayout from "@/components/layouts/DashboardLayout";
 import {userService, AdminUser} from "@/services/user.service";
 import {useState} from "react";
 import type {ColumnsType} from "antd/es/table";
+import {useAuth} from "@/context/AuthContext";
 
 const {Title, Text} = Typography;
 
 export default function AdminUsersPage() {
   const queryClient = useQueryClient();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
+  const [editingId, setEditingId] = useState<string | null>(null);
   const [form] = Form.useForm();
 
-  // CURRENT LOGGED IN USER (Mocked)
-  // In real app, this comes from auth context
-  const currentUser = {is_super_admin: true, id: "user-1"};
+  const {user: currentUser} = useAuth();
+  const isSuperAdmin = currentUser?.is_admin;
 
-  // Queries
   const {data: users, isLoading} = useQuery({
     queryKey: ["users"],
     queryFn: userService.getUsers,
   });
 
-  // Mutations
   const createMutation = useMutation({
     mutationFn: userService.createUser,
     onSuccess: () => {
       message.success("Admin berhasil ditambahkan");
-      setIsModalOpen(false);
-      form.resetFields();
+      handleCloseModal();
       queryClient.invalidateQueries({queryKey: ["users"]});
+    },
+    onError: (err: any) => {
+      message.error(err.response?.data?.message || "Gagal membuat admin");
+    },
+  });
+
+  const updateMutation = useMutation({
+    mutationFn: (values: any) => userService.updateUser(editingId!, values),
+    onSuccess: () => {
+      message.success("Data admin berhasil diperbarui");
+      handleCloseModal();
+      queryClient.invalidateQueries({queryKey: ["users"]});
+    },
+    onError: (err: any) => {
+      message.error(err.response?.data?.message || "Gagal update admin");
     },
   });
 
@@ -58,6 +74,9 @@ export default function AdminUsersPage() {
     onSuccess: () => {
       message.success("Admin berhasil dihapus");
       queryClient.invalidateQueries({queryKey: ["users"]});
+    },
+    onError: (err: any) => {
+      message.error(err.response?.data?.message || "Gagal menghapus admin");
     },
   });
 
@@ -70,8 +89,30 @@ export default function AdminUsersPage() {
     },
   });
 
-  const handleCreate = (values: {name: string; email: string}) => {
-    createMutation.mutate(values);
+  const handleSubmit = (values: any) => {
+    if (isEditMode) {
+      if (!values.password) delete values.password;
+      updateMutation.mutate(values);
+    } else {
+      createMutation.mutate(values);
+    }
+  };
+
+  const handleEdit = (record: AdminUser) => {
+    setIsEditMode(true);
+    setEditingId(record.id);
+    form.setFieldsValue({
+      name: record.name,
+      email: record.email,
+    });
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setIsEditMode(false);
+    setEditingId(null);
+    form.resetFields();
   };
 
   const handleDelete = (id: string) => {
@@ -93,7 +134,7 @@ export default function AdminUsersPage() {
       render: (text, record) => (
         <Space>
           <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
-            {text.charAt(0)}
+            {text.charAt(0).toUpperCase()}
           </div>
           <div>
             <div className="font-medium">{text}</div>
@@ -125,13 +166,23 @@ export default function AdminUsersPage() {
       title: "Aksi",
       key: "action",
       render: (_, record) => {
-        // Only Super Admin can edit/delete, but cannot delete themselves
-        if (!currentUser.is_super_admin) return <Text type="secondary">-</Text>;
+        if (!isSuperAdmin) return <Text type="secondary">-</Text>;
 
-        const isSelf = record.id === currentUser.id;
+        const isSelf = record.id === currentUser?.id;
+
+        const isTargetSuperAdmin = record.is_super_admin;
+        const canModify = !isSelf && !isTargetSuperAdmin;
 
         return (
           <Space>
+            <Tooltip title="Edit">
+              <Button
+                size="small"
+                icon={<EditOutlined />}
+                onClick={() => handleEdit(record)}
+              />
+            </Tooltip>
+
             <Tooltip title={record.is_active ? "Non-aktifkan" : "Aktifkan"}>
               <Button
                 size="small"
@@ -144,7 +195,7 @@ export default function AdminUsersPage() {
                     status: !record.is_active,
                   })
                 }
-                disabled={isSelf}
+                disabled={!canModify}
               />
             </Tooltip>
             <Tooltip title="Hapus">
@@ -153,7 +204,7 @@ export default function AdminUsersPage() {
                 size="small"
                 icon={<DeleteOutlined />}
                 onClick={() => handleDelete(record.id)}
-                disabled={isSelf}
+                disabled={!canModify}
               />
             </Tooltip>
           </Space>
@@ -165,7 +216,7 @@ export default function AdminUsersPage() {
   return (
     <DashboardLayout>
       <Head>
-        <title>Kelola Admin | SchoolPay</title>
+        <title>Kelola Admin | ESepasi</title>
       </Head>
 
       <div className="space-y-6">
@@ -178,12 +229,16 @@ export default function AdminUsersPage() {
               Daftar pengguna yang memiliki akses dashboard
             </Text>
           </div>
-          {currentUser.is_super_admin && (
+          {isSuperAdmin && (
             <Button
               type="primary"
               size="large"
               icon={<UserAddOutlined />}
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => {
+                setIsEditMode(false);
+                form.resetFields();
+                setIsModalOpen(true);
+              }}
             >
               Tambah Admin
             </Button>
@@ -201,12 +256,12 @@ export default function AdminUsersPage() {
         </Card>
 
         <Modal
-          title="Tambah Admin Baru"
+          title={isEditMode ? "Edit Admin" : "Tambah Admin Baru"}
           open={isModalOpen}
-          onCancel={() => setIsModalOpen(false)}
+          onCancel={handleCloseModal}
           footer={null}
         >
-          <Form form={form} layout="vertical" onFinish={handleCreate}>
+          <Form form={form} layout="vertical" onFinish={handleSubmit}>
             <Form.Item
               name="name"
               label="Nama Lengkap"
@@ -225,22 +280,24 @@ export default function AdminUsersPage() {
             </Form.Item>
             <Form.Item
               name="password"
-              label="Password"
+              label={isEditMode ? "Password Baru (Opsional)" : "Password"}
               rules={[
-                {required: true, message: "Password wajib diisi"},
-                {min: 6, message: "Minimal 6 karakter"},
+                {required: !isEditMode, message: "Password wajib diisi"},
+                {min: 8, message: "Minimal 8 karakter"},
               ]}
             >
-              <Input.Password placeholder="Password login" />
+              <Input.Password
+                placeholder={isEditMode ? "Password baru" : "Password login"}
+              />
             </Form.Item>
             <Form.Item>
               <Button
                 type="primary"
                 htmlType="submit"
                 block
-                loading={createMutation.isPending}
+                loading={createMutation.isPending || updateMutation.isPending}
               >
-                Simpan
+                {isEditMode ? "Simpan Perubahan" : "Buat Admin"}
               </Button>
             </Form.Item>
           </Form>
