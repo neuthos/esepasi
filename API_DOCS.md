@@ -455,10 +455,9 @@ _Requirement: admin melihat riwayat, ringkasan, tagihan belum bayar lewat jatuh 
 - `page`: 1
 - `limit`: 10
 - `search`: "INV/2024" (Optional - Invoice Code)
-- `status`: `paid` | `unpaid` | `overdue` (Optional)
+- `status`: `paid` | `pending` | `overdue` (Optional)
 - `student_ids`: `["uuid-1", "uuid-2"]` (Optional: Filter by multiple students)
 - `period`: `YYYY-MM` (Optional: Filter by billing period)
-- `start_date`, `end_date`: `YYYY-MM-DD` (Optional)
 
 **Response (200 OK):**
 
@@ -466,21 +465,22 @@ _Requirement: admin melihat riwayat, ringkasan, tagihan belum bayar lewat jatuh 
 {
   "success": true,
   "data": [
-     {
-       "id": "uuid-bill-101",
-       "student": { "nis": "2023001", "name": "Budi" },
-       "type": "spp", // or 'non_spp'
-       "code": "INV/2024/001",
-       "amount": 500000,
-       "paid_amount": 0,
-       "billing_period": "2024-01", // For SPP
-       "description": "Uang Gedung", // For Non-SPP
-       "due_date": "2024-01-20",
-       "status": "pending", // pending, paid, overdue, cancelled
-       "is_overdue": false // Computed field
-     }
+    {
+      "id": "uuid-bill-101",
+      "student": {"id": "sid-1", "nis": "2023001", "name": "Budi"},
+      "type": "spp", // or 'non_spp'
+      "code": "INV/2024/0001",
+      "amount": 500000,
+      "paid_amount": 0,
+      "billing_period": "2024-01",
+      "description": null,
+      "due_date": "2024-01-20",
+      "status": "pending",
+      "is_overdue": false,
+      "created_at": "2024-01-01T00:00:00Z"
+    }
   ],
-  "meta": { ... }
+  "meta": {"page": 1, "limit": 10, "total": 100}
 }
 ```
 
@@ -501,10 +501,10 @@ _Requirement: admin melihat riwayat, ringkasan, tagihan belum bayar lewat jatuh 
 }
 ```
 
-### Upload Bulk Tagihan (SPP)
+### Upload Bulk Tagihan
 
-`POST /bills/upload/spp`
-_Requirement: upload tagihan spp bulan dengan required field NIS, Nama siswa, bulan, tagihan, jatuh tempo_
+`POST /bills/bulk`
+_Requirement: Upload banyak tagihan sekaligus (Mixed SPP & Non-SPP supported via payload structure)_
 
 **Payload:**
 
@@ -513,9 +513,16 @@ _Requirement: upload tagihan spp bulan dengan required field NIS, Nama siswa, bu
   "data": [
     {
       "nis": "2023001",
-      "student_name": "Budi", // Used for validation check
-      "billing_period": "2024-02", // YYYY-MM
+      "type": "spp",
+      "billing_period": "2024-02",
       "amount": 500000,
+      "due_date": "2024-02-20"
+    },
+    {
+      "nis": "2023002",
+      "type": "non_spp",
+      "description": "Uang Buku",
+      "amount": 150000,
       "due_date": "2024-02-20"
     }
   ]
@@ -527,76 +534,7 @@ _Requirement: upload tagihan spp bulan dengan required field NIS, Nama siswa, bu
 ```json
 {
   "success": true,
-  "message": "Processed 50 bills successfully",
-  "data": {
-    "total_processed": 50,
-    "total_failed": 0,
-    "failed_rows": []
-  }
-}
-```
-
-### Upload Tagihan Non-SPP
-
-`POST /bills/upload/non-spp`
-_Requirement: upload tagihan dengan nominal khusus / non spp_
-
-**Payload:**
-
-```json
-{
-  "data": [
-    {
-      "nis": "2023001",
-      "student_name": "Budi",
-      "amount": 150000,
-      "description": "Uang Buku Paket A",
-      "bill_date": "2024-01-15",
-      "due_date": "2024-01-30"
-    }
-  ]
-}
-```
-
-### Inquiry Tagihan (Public/Parent API)
-
-`GET /inquiry/:nis`
-_Requirement: API untuk inquiry berdasarkan NIS dengan menghasilkan info list tagihan dan total tagihan_
-
-**Response (200 OK):**
-
-```json
-{
-  "success": true,
-  "data": {
-    "student": {"nis": "2023001", "name": "Budi"},
-    "summary": {
-      "total_outstanding": 1000000,
-      "overdue_count": 1
-    },
-    "bills": [
-      {
-        "id": "uuid-bill-102",
-        "description": "SPP Februari 2024",
-        "amount": 500000,
-        "due_date": "2024-02-20",
-        "status": "pending"
-      }
-    ]
-  }
-}
-```
-
-### Void / Cancel Tagihan
-
-`POST /bills/:id/cancel`
-_Requirement: void / cancle tagihan_
-
-**Payload:**
-
-```json
-{
-  "reason": "Salah input nominal"
+  "message": "Berhasil import 50 tagihan"
 }
 ```
 
@@ -606,53 +544,146 @@ _Requirement: void / cancle tagihan_
 
 ### 5.1. List Transactions
 
-Get a paginated list of transactions with extensive filtering.
+Get a paginated list of transactions (payments) with filtering capabilities.
 
 - **Endpoint**: `GET /transactions`
 - **Query Parameters**:
   - `page`: Page number (default: 1)
   - `limit`: Items per page (default: 10)
-  - `search`: Search by TRX Code, Invoice Code, or Student Name/NIS
-  - `status`: Transaction status (`success`, `pending`, `failed`)
-  - `payment_method`: Payment method (`transfer`, `cash`, `manual`)
-  - `student_ids`: Filter by specific students (comma-separated UUIDs)
-  - `start_date`: Filter start date (YYYY-MM-DD)
-  - `end_date`: Filter end date (YYYY-MM-DD)
-- **Response**:
+  - `search`: Search by TRX Code, Bill/Invoice Code, Student Name, or NIS
+  - `status`: Transaction status (Always `success` for history)
+  - `payment_method`: String any
+  - `student_ids`: Filter by specific students (UUIDs)
+  - `start_date`: Filter by date range start (YYYY-MM-DD or YYYY/MM/DD)
+  - `end_date`: Filter by date range end
+- **Response (200 OK)**:
   ```json
   {
+    "success": true,
     "data": [
       {
         "id": "uuid",
-        "code": "TRX/2024/0001",
-        "date": "2024-03-20T10:00:00Z",
+        "code": "TRX-12345678",
+        "date": "2024-03-20T10:00:00.000Z",
         "amount": 500000,
         "payment_method": "transfer",
         "status": "success",
-        "description": "Pembayaran SPP Maret",
+        "bill_code": "INV/2024/0001",
+        "description": "Pembayaran SPP",
         "student": {
-          "id": "uuid",
-          "name": "Budi Santoso",
-          "nis": "2024001"
-        },
-        "bill_code": "INV/2024/0001"
+          "id": "uuid-student",
+          "nis": "2024001",
+          "name": "Budi Santoso"
+        }
       }
     ],
-    "total": 100,
-    "page": 1,
-    "limit": 10
+    "meta": {
+      "page": 1,
+      "limit": 10,
+      "total": 50
+    }
   }
   ```
 
 ### 5.2. Export Transactions
 
-Download transactions report as Excel/CSV.
+Download full transaction report as CSV.
 
 - **Endpoint**: `GET /transactions/export`
 - **Query Parameters**: Same as List Transactions.
-- **Response**: Blob/File download.
+- **Response**: CSV File download.
 
 ---
+
+## 7. Integration API (External Systems)
+
+API endpoints designed for integration with payment gateways or external systems (e.g., WhatsApp bot, Payment Terminal).
+
+### 7.1. Create Inquiry (Cek Tagihan)
+
+Create a new inquiry session for pending bills. This will **invalidate/expire** any previous pending inquiries for this student.
+
+- **Endpoint**: `POST /external/inquiry`
+- **Payload**:
+  ```json
+  {
+    "nis": "2024001"
+  }
+  ```
+- **Response (200 OK)**:
+  ```json
+  {
+    "success": true,
+    "data": {
+      "inquiry_code": "INQ-20240320-ABCD",
+      "student": {
+        "nis": "2024001",
+        "name": "Budi Santoso",
+        "school_id": "uuid-school"
+      },
+      "total_amount": 1000000,
+      "status": "pending",
+      "expired_at": "2024-03-21T10:00:00.000Z",
+      "created_at": "2024-03-20T10:00:00.000Z",
+      "bills": [
+        {
+          "bill_code": "INV/2024/0001",
+          "type": "spp",
+          "description": "SPP Maret 2024",
+          "amount": 500000,
+          "billing_period": "2024-03"
+        },
+        {
+          "bill_code": "INV/2024/0002",
+          "type": "non_spp",
+          "description": "Uang Buku",
+          "amount": 500000,
+          "billing_period": null
+        }
+      ]
+    }
+  }
+  ```
+
+### 7.2. Process Payment
+
+Submit a payment based on Inquiry Code (Preferred) or Bill Code (Single Bill).
+
+- **Endpoint**: `POST /external/payment`
+- **Payload (via Inquiry Code - Recommended)**:
+
+  ```json
+  {
+    "inquiry_code": "INQ-20240320-ABCD",
+    "amount": 1000000, // Must match inquiry total
+    "payment_method": "transfer",
+    "reference_number": "REF123",
+    "notes": "Payment via API"
+  }
+  ```
+
+- **Payload (via Bill Code - Legacy/Single)**:
+
+  ```json
+  {
+    "bill_code": "INV/2024/0001",
+    "amount": 500000,
+    "payment_method": "transfer"
+  }
+  ```
+
+- **Response (200 OK)**:
+  ```json
+  {
+    "success": true,
+    "message": "Pembayaran berhasil diproses",
+    "data": {
+      "payment_id": "uuid-payment-or-list",
+      "inquiry_code": "INQ-20240320-ABCD",
+      "status": "paid"
+    }
+  }
+  ```
 
 ## 6. Dashboard
 

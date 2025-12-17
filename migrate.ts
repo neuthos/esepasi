@@ -18,11 +18,28 @@ const pool = new Pool({
 });
 
 async function runMigration(action: "up" | "down", migrationNumber = "001") {
-  const migrationFile = join(
-    process.cwd(),
-    "migrations",
-    `${migrationNumber}_init.${action}.sql`
+  const migrationsDir = join(process.cwd(), "migrations");
+  // Find file matching pattern: {number}_*.{action}.sql
+  // e.g. 002_inquiries.up.sql
+  // but fallback to 002_init.up.sql if exact pattern match isn't strict?
+  // Actually just find startsWith number and endsWith action.sql
+
+  // Need to import readdirSync
+  const {readdirSync} = await import("fs");
+
+  const files = readdirSync(migrationsDir);
+  const filename = files.find(
+    (f) => f.startsWith(`${migrationNumber}_`) && f.endsWith(`.${action}.sql`)
   );
+
+  if (!filename) {
+    console.error(
+      `❌ Migration file for ${migrationNumber} ${action} not found.`
+    );
+    process.exit(1);
+  }
+
+  const migrationFile = join(migrationsDir, filename);
 
   try {
     console.log(

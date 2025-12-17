@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/refs */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, {useMemo, useRef, useState} from "react";
 import {Select, Spin} from "antd";
 import type {SelectProps} from "antd/es/select";
@@ -33,7 +35,6 @@ export default function DebounceSelect<
 
       fetchOptions(value).then((newOptions) => {
         if (fetchId !== fetchRef.current) {
-          // for fetch callback order
           return;
         }
 

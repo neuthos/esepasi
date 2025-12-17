@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import {
   Card,
   Row,
@@ -6,7 +7,7 @@ import {
   Typography,
   Statistic,
   DatePicker,
-  Spin,
+  Skeleton,
   theme,
 } from "antd";
 import {
@@ -15,6 +16,7 @@ import {
   CloseCircleOutlined,
   WalletOutlined,
   CalendarOutlined,
+  BookOutlined,
 } from "@ant-design/icons";
 import DashboardLayout from "@/components/layouts/DashboardLayout";
 import {useQuery} from "@tanstack/react-query";
@@ -26,7 +28,6 @@ const {Title, Text} = Typography;
 
 export default function DashboardPage() {
   const {token} = theme.useToken();
-  // Default to current month
   const [period, setPeriod] = useState(dayjs().format("YYYY-MM"));
 
   const {data: stats, isLoading} = useQuery({
@@ -45,7 +46,7 @@ export default function DashboardPage() {
       <div className="space-y-6">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <Title level={2} className="!m-0">
+            <Title level={2} className="m-0!">
               Dashboard
             </Title>
             <Text type="secondary">
@@ -66,22 +67,44 @@ export default function DashboardPage() {
               }
               placeholder="Pilih Bulan"
               className="w-40"
-              bordered={false}
             />
           </div>
         </div>
 
         {isLoading ? (
-          <div className="h-64 flex justify-center items-center">
-            <Spin size="large" />
-          </div>
+          <>
+            <Row gutter={[16, 16]}>
+              {[1, 2, 3].map((i) => (
+                <Col xs={24} sm={8} key={i}>
+                  <Card className="shadow-sm h-full">
+                    <Skeleton active paragraph={{rows: 1}} />
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+            <div className="mt-6">
+              <Skeleton.Input
+                active
+                size="default"
+                className="mb-4"
+                style={{width: 200}}
+              />
+              <Row gutter={[16, 16]}>
+                {[1, 2, 3].map((i) => (
+                  <Col xs={24} sm={12} lg={8} key={i}>
+                    <Card className="shadow-sm">
+                      <Skeleton active paragraph={{rows: 2}} />
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            </div>
+          </>
         ) : (
           <>
-            {/* GLOBAL STATS */}
             <Row gutter={[16, 16]}>
               <Col xs={24} sm={8}>
                 <Card
-                  bordered={false}
                   className="shadow-sm h-full"
                   style={{borderLeft: `4px solid ${token.colorPrimary}`}}
                 >
@@ -95,7 +118,6 @@ export default function DashboardPage() {
               </Col>
               <Col xs={24} sm={8}>
                 <Card
-                  bordered={false}
                   className="shadow-sm h-full"
                   style={{borderLeft: `4px solid ${token.colorSuccess}`}}
                 >
@@ -114,7 +136,6 @@ export default function DashboardPage() {
               </Col>
               <Col xs={24} sm={8}>
                 <Card
-                  bordered={false}
                   className="shadow-sm h-full"
                   style={{borderLeft: `4px solid ${token.colorError}`}}
                 >
@@ -133,67 +154,55 @@ export default function DashboardPage() {
               </Col>
             </Row>
 
-            {/* PERIOD STATS */}
             <div>
               <Title level={4} className="mb-4 text-gray-700">
-                Laporan Periode: {dayjs(period).format("MMMM YYYY")}
+                Laporan SPP: {dayjs(period).format("MMMM YYYY")}
               </Title>
               <Row gutter={[16, 16]}>
-                {/* UNPAID PERIOD */}
                 <Col xs={24} sm={12} lg={8}>
-                  <Card
-                    bordered={false}
-                    className="shadow-sm bg-red-50 border-red-100"
-                  >
+                  <Card className="shadow-sm bg-red-50 border-red-100">
                     <div className="mb-4">
                       <Text type="secondary" className="block mb-1">
-                        Total Belum Bayar (Periode Ini)
+                        Total Belum Bayar (SPP)
                       </Text>
-                      <Title level={3} type="danger" className="!m-0">
-                        {formatCurrency(stats?.period.unpaid.amount || 0)}
+                      <Title level={3} type="danger" className="m-0!">
+                        {formatCurrency(stats?.period.spp.unpaid.amount || 0)}
                       </Title>
                     </div>
                     <div className="flex items-center gap-2 text-red-600 bg-red-100 p-2 rounded w-fit">
                       <TeamOutlined />
                       <span className="font-medium">
-                        {stats?.period.unpaid.student_count} Siswa Belum Bayar
+                        {stats?.period.spp.unpaid.student_count} Siswa Belum
+                        Bayar
                       </span>
                     </div>
                   </Card>
                 </Col>
 
-                {/* PAID PERIOD */}
                 <Col xs={24} sm={12} lg={8}>
-                  <Card
-                    bordered={false}
-                    className="shadow-sm bg-green-50 border-green-100"
-                  >
+                  <Card className="shadow-sm bg-green-50 border-green-100">
                     <div className="mb-4">
                       <Text type="secondary" className="block mb-1">
-                        Total Sudah Bayar (Periode Ini)
+                        Total Sudah Bayar (SPP)
                       </Text>
-                      <Title level={3} type="success" className="!m-0">
-                        {formatCurrency(stats?.period.paid.amount || 0)}
+                      <Title level={3} type="success" className="m-0!">
+                        {formatCurrency(stats?.period.spp.paid.amount || 0)}
                       </Title>
                     </div>
                     <div className="flex items-center gap-2 text-green-600 bg-green-100 p-2 rounded w-fit">
                       <TeamOutlined />
                       <span className="font-medium">
-                        {stats?.period.paid.student_count} Siswa Sudah Bayar
+                        {stats?.period.spp.paid.student_count} Siswa Sudah Bayar
                       </span>
                     </div>
                   </Card>
                 </Col>
 
-                {/* EXPECTED TOTAL */}
                 <Col xs={24} sm={24} lg={8}>
-                  <Card
-                    bordered={false}
-                    className="shadow-sm bg-blue-50 border-blue-100 h-full"
-                  >
+                  <Card className="shadow-sm border-blue-100 h-full">
                     <Statistic
-                      title="Estimasi Total Pendapatan (Periode Ini)"
-                      value={stats?.period.expected_total}
+                      title="Estimasi Total SPP (Periode Ini)"
+                      value={stats?.period.spp.expected_total}
                       prefix={<WalletOutlined />}
                       formatter={(val) => formatCurrency(val as number)}
                       valueStyle={{
@@ -202,43 +211,113 @@ export default function DashboardPage() {
                       }}
                     />
                     <div className="mt-4 text-xs text-gray-500">
-                      *Total potensi pendapatan jika semua siswa membayar
+                      *Total potensi SPP jika semua siswa membayar
                     </div>
                   </Card>
                 </Col>
               </Row>
             </div>
 
-            {/* QUICK ACTIONS */}
+            <div className="mt-6">
+              <Title level={4} className="mb-4 text-gray-700">
+                Laporan Non-SPP
+              </Title>
+              <Row gutter={[16, 16]}>
+                <Col xs={24} sm={12} lg={8}>
+                  <Card className="shadow-sm bg-orange-50 border-orange-100">
+                    <div className="mb-4">
+                      <Text type="secondary" className="block mb-1">
+                        Total Belum Bayar (Non-SPP)
+                      </Text>
+                      <Title level={3} type="warning" className="m-0!">
+                        {formatCurrency(
+                          stats?.period.non_spp.unpaid.amount || 0
+                        )}
+                      </Title>
+                    </div>
+                    <div className="flex items-center gap-2 text-orange-600 bg-orange-100 p-2 rounded w-fit">
+                      <BookOutlined />
+                      <span className="font-medium">
+                        {stats?.period.non_spp.unpaid.student_count} Siswa Belum
+                        Lunas
+                      </span>
+                    </div>
+                  </Card>
+                </Col>
+
+                <Col xs={24} sm={12} lg={8}>
+                  <Card className="shadow-sm bg-teal-50 border-teal-100">
+                    <div className="mb-4">
+                      <Text type="secondary" className="block mb-1">
+                        Total Sudah Bayar (Non-SPP)
+                      </Text>
+                      <Title level={3} className="m-0! text-teal-600">
+                        {formatCurrency(stats?.period.non_spp.paid.amount || 0)}
+                      </Title>
+                    </div>
+                    <div className="flex items-center gap-2 text-teal-600 bg-teal-100 p-2 rounded w-fit">
+                      <BookOutlined />
+                      <span className="font-medium">
+                        {stats?.period.non_spp.paid.student_count} Siswa Sudah
+                        Lunas
+                      </span>
+                    </div>
+                  </Card>
+                </Col>
+
+                <Col xs={24} sm={24} lg={8}>
+                  <Card className="shadow-sm border-gray-100 h-full">
+                    <Statistic
+                      title="Estimasi Total Non-SPP"
+                      value={stats?.period.non_spp.expected_total}
+                      prefix={<WalletOutlined />}
+                      formatter={(val) => formatCurrency(val as number)}
+                      valueStyle={{
+                        color: token.colorWarning,
+                        fontWeight: "bold",
+                      }}
+                    />
+                    <div className="mt-4 text-xs text-gray-500">
+                      *Buku, Seragam, Uang Pangkal, dll (Dibuat bulan ini)
+                    </div>
+                  </Card>
+                </Col>
+              </Row>
+            </div>
+
             <Card title="Aksi Cepat" className="shadow-sm">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div
-                  className="p-4 border rounded-lg hover:border-blue-500 cursor-pointer transition-all"
-                  onClick={() => (window.location.href = "/dashboard/bills")}
+                <Link
+                  href="/dashboard/bills"
+                  className="block text-inherit hover:text-inherit"
                 >
-                  <Title level={5}>Upload Tagihan</Title>
-                  <Text type="secondary">
-                    Upload tagihan massal untuk siswa
-                  </Text>
-                </div>
-                <div
-                  className="p-4 border rounded-lg hover:border-blue-500 cursor-pointer transition-all"
-                  onClick={() => (window.location.href = "/dashboard/students")}
+                  <div className="p-4 border rounded-lg hover:border-blue-500 cursor-pointer transition-all h-full">
+                    <Title level={5}>Upload Tagihan</Title>
+                    <Text type="secondary">
+                      Upload tagihan massal untuk siswa
+                    </Text>
+                  </div>
+                </Link>
+                <Link
+                  href="/dashboard/students"
+                  className="block text-inherit hover:text-inherit"
                 >
-                  <Title level={5}>Registrasi Siswa</Title>
-                  <Text type="secondary">Tambah data siswa baru</Text>
-                </div>
-                <div
-                  className="p-4 border rounded-lg hover:border-blue-500 cursor-pointer transition-all"
-                  onClick={() =>
-                    (window.location.href = "/dashboard/transactions")
-                  }
+                  <div className="p-4 border rounded-lg hover:border-blue-500 cursor-pointer transition-all h-full">
+                    <Title level={5}>Registrasi Siswa</Title>
+                    <Text type="secondary">Tambah data siswa baru</Text>
+                  </div>
+                </Link>
+                <Link
+                  href="/dashboard/transactions"
+                  className="block text-inherit hover:text-inherit"
                 >
-                  <Title level={5}>Laporan Transaksi</Title>
-                  <Text type="secondary">
-                    Download laporan transaksi harian
-                  </Text>
-                </div>
+                  <div className="p-4 border rounded-lg hover:border-blue-500 cursor-pointer transition-all h-full">
+                    <Title level={5}>Laporan Transaksi</Title>
+                    <Text type="secondary">
+                      Download laporan transaksi harian
+                    </Text>
+                  </div>
+                </Link>
               </div>
             </Card>
           </>

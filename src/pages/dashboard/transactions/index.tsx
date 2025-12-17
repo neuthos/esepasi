@@ -6,7 +6,6 @@ import {
   Card,
   Input,
   Tag,
-  Space,
   Typography,
   Select,
   Button,
@@ -14,6 +13,7 @@ import {
   Row,
   Col,
   message,
+  Tabs,
 } from "antd";
 import {
   HistoryOutlined,
@@ -23,12 +23,11 @@ import {
 } from "@ant-design/icons";
 import DashboardLayout from "@/components/layouts/DashboardLayout";
 import {transactionService, Transaction} from "@/services/transaction.service";
-import {studentService} from "@/services/student.service";
 import {useRouter} from "next/router";
 import {useState} from "react";
 import type {ColumnsType} from "antd/es/table";
 import dayjs from "dayjs";
-import DebounceSelect from "@/components/common/DebounceSelect";
+import StudentSelect from "@/components/dashboard/StudentSelect";
 
 const {Title, Text} = Typography;
 const {RangePicker} = DatePicker;
@@ -38,42 +37,36 @@ export default function TransactionsPage() {
   const {
     page = "1",
     search = "",
-    status = "all",
-    payment_method = "all",
-    student_ids = "",
+    status = null,
+    student_nis = "",
     start_date = "",
     end_date = "",
   } = router.query;
 
-  // Parsing Filters (Initial only)
-  const studentIdsArray = student_ids ? (student_ids as string).split(",") : [];
+  const studentNisArray = student_nis ? (student_nis as string).split(",") : [];
 
-  // Local state for filters
   const [filters, setFilters] = useState({
     search: search as string,
     status: status as string,
-    payment_method: payment_method as string,
-    student_ids: studentIdsArray,
+    student_nis: studentNisArray,
     date_range:
       start_date && end_date
-        ? [dayjs(start_date as string), dayjs(end_date as string)]
+        ? ([dayjs(start_date as string), dayjs(end_date as string)] as [
+            dayjs.Dayjs,
+            dayjs.Dayjs
+          ])
         : null,
   });
 
-  const studentSelectValue = (filters.student_ids || []).map((id) => ({
-    label: `ID: ${id}`,
-    value: id,
-  }));
+  const [activeTab, setActiveTab] = useState("transactions");
 
-  // Fetch Transactions
   const {data, isLoading} = useQuery({
     queryKey: [
       "transactions",
       page,
       search,
       status,
-      payment_method,
-      studentIdsArray,
+      studentNisArray,
       start_date,
       end_date,
     ],
@@ -83,11 +76,24 @@ export default function TransactionsPage() {
         limit: 10,
         search: search as string,
         status: status as string,
-        payment_method: payment_method as string,
-        student_ids: studentIdsArray,
+        student_nis: studentNisArray,
         start_date: start_date as string,
         end_date: end_date as string,
       }),
+    placeholderData: (prev) => prev,
+  });
+
+  const {data: inquiryData, isLoading: isLoadingInquiry} = useQuery({
+    queryKey: ["inquiries", page, search, status, studentNisArray],
+    queryFn: () =>
+      transactionService.getInquiries({
+        page: Number(page),
+        limit: 10,
+        search: search as string,
+        status: status as string,
+        student_nis: studentNisArray,
+      }),
+    enabled: activeTab === "inquiries",
     placeholderData: (prev) => prev,
   });
 
@@ -106,16 +112,14 @@ export default function TransactionsPage() {
     const query: Record<string, any> = {
       ...filters,
       page: 1,
-      date_range: undefined, // Don't put object in URL
+      date_range: undefined,
     };
 
-    // Convert arrays to comma strings
-    if (Array.isArray(query.student_ids)) {
-      if (query.student_ids.length === 0) delete query.student_ids;
-      else query.student_ids = query.student_ids.join(",");
+    if (Array.isArray(query.student_nis)) {
+      if (query.student_nis.length === 0) delete query.student_nis;
+      else query.student_nis = query.student_nis.join(",");
     }
 
-    // Handle Date Range
     if (filters.date_range && Array.isArray(filters.date_range)) {
       query.start_date = filters.date_range[0]?.format("YYYY-MM-DD");
       query.end_date = filters.date_range[1]?.format("YYYY-MM-DD");
@@ -132,11 +136,6 @@ export default function TransactionsPage() {
   };
 
   const handleTableChange = (pagination: any) => {
-    // Apply current filters + new page
-    // Need to reconstruct query from URL params or consistent local state?
-    // Ideally consistent with applyFilters logic but with updated page.
-
-    // To safe, we use current router query and just update page
     const query = {...router.query, page: pagination.current};
     router.replace({pathname: router.pathname, query});
   };
@@ -145,8 +144,7 @@ export default function TransactionsPage() {
     exportMutation.mutate({
       search: search as string,
       status: status as string,
-      payment_method: payment_method as string,
-      student_ids: studentIdsArray,
+      student_nis: studentNisArray,
       start_date: start_date as string,
       end_date: end_date as string,
     });
@@ -207,7 +205,9 @@ export default function TransactionsPage() {
       title: "Metode",
       dataIndex: "payment_method",
       key: "method",
-      render: (val) => val?.toUpperCase(),
+      render: (val) => (
+        <Tag color={methodColors[val] || "default"}>{val?.toUpperCase()}</Tag>
+      ),
     },
     {
       title: "Nominal",
@@ -222,31 +222,80 @@ export default function TransactionsPage() {
       title: "Status",
       dataIndex: "status",
       key: "status",
-      render: (val) => (
-        <Tag color={statusColors[val]}>{val?.toUpperCase()}</Tag>
-      ),
-    },
-    {
-      title: "Aksi",
-      key: "action",
-      render: () => (
-        <Button
-          size="small"
-          icon={<PrinterOutlined />}
-          title="Cetak Kuitansi"
-        />
-      ),
+      render: (val) => {
+        const name: any = {
+          success: "Sukses",
+          pending: "Pending",
+          failed: "Gagal",
+        };
+
+        return <Tag color={statusColors[val]}>{name[val]}</Tag>;
+      },
     },
   ];
 
-  // Fetch Students for Select (Debounced)
-  const fetchStudentList = async (searchText: string) => {
-    const res = await studentService.getStudents({
-      search: searchText,
-      limit: 20,
-    });
-    return res.data.map((s) => ({label: `${s.name} (${s.nis})`, value: s.id}));
-  };
+  const inquiryColumns: ColumnsType<any> = [
+    {
+      title: "Kode Inquiry",
+      dataIndex: "code",
+      key: "code",
+      render: (text) => (
+        <span className="font-mono text-xs font-semibold">{text}</span>
+      ),
+    },
+    {
+      title: "Siswa",
+      dataIndex: "student_name",
+      key: "student",
+      render: (text, record) => (
+        <div>
+          <div className="font-medium">{text}</div>
+          <div className="text-xs text-gray-400">{record.student_nis}</div>
+        </div>
+      ),
+    },
+    {
+      title: "Total Tagihan",
+      dataIndex: "total_amount",
+      key: "total",
+      align: "right",
+      render: (val) => (
+        <span className="font-semibold">
+          Rp {Number(val).toLocaleString("id-ID")}
+        </span>
+      ),
+    },
+    {
+      title: "Status",
+      dataIndex: "status",
+      key: "status",
+      render: (val) => {
+        const color =
+          val === "paid" ? "success" : val === "pending" ? "orange" : "default";
+        return <Tag color={color}>{val?.toUpperCase()}</Tag>;
+      },
+    },
+    {
+      title: "Expired At",
+      dataIndex: "expired_at",
+      key: "expired",
+      render: (val) => (
+        <span className="text-gray-500 text-xs">
+          {dayjs(val).format("DD/MM/YYYY HH:mm")}
+        </span>
+      ),
+    },
+    {
+      title: "Dibuat",
+      dataIndex: "created_at",
+      key: "created",
+      render: (val) => (
+        <span className="text-gray-500 text-xs">
+          {dayjs(val).format("DD/MM/YYYY HH:mm")}
+        </span>
+      ),
+    },
+  ];
 
   return (
     <DashboardLayout>
@@ -275,7 +324,7 @@ export default function TransactionsPage() {
 
         <Card className="shadow-sm">
           <Row gutter={[16, 16]} className="mb-6" align="middle">
-            <Col xs={24} md={4}>
+            <Col xs={24} md={6}>
               <Input
                 placeholder="Cari No. TRX / Invoice..."
                 allowClear
@@ -291,17 +340,18 @@ export default function TransactionsPage() {
                 value={filters.status}
                 style={{width: "100%"}}
                 size="large"
+                placeholder="Status"
+                allowClear
                 onChange={(val) => handleFilterChange("status", val)}
                 options={[
-                  {value: "all", label: "Semua Status"},
-                  {value: "success", label: "Berhasil"},
+                  {value: "success", label: "Sukses"},
                   {value: "pending", label: "Pending"},
                   {value: "failed", label: "Gagal"},
                 ]}
               />
             </Col>
 
-            <Col xs={24} md={4}>
+            <Col xs={24} md={6}>
               <RangePicker
                 style={{width: "100%"}}
                 size="large"
@@ -312,23 +362,20 @@ export default function TransactionsPage() {
             </Col>
 
             {/* New Row for remaining filters if needed or compact */}
-            <Col xs={24} md={4}>
-              <DebounceSelect
+            <Col xs={24} md={6}>
+              <StudentSelect
                 mode="multiple"
-                value={studentSelectValue}
+                value={filters.student_nis}
                 placeholder="Filter Siswa"
-                fetchOptions={fetchStudentList}
-                onChange={(newValue) => {
-                  const ids = (newValue as any[]).map((v) => v.value);
-                  handleFilterChange("student_ids", ids);
+                onChange={(newValue: any) => {
+                  handleFilterChange("student_nis", newValue);
                 }}
                 style={{width: "100%"}}
-                size="large"
               />
             </Col>
             <Col
               xs={24}
-              md={8}
+              md={2}
               className="text-right flex items-center justify-end"
             >
               <Button
@@ -337,23 +384,54 @@ export default function TransactionsPage() {
                 onClick={applyFilters}
                 icon={<SearchOutlined />}
               >
-                Terapkan Filter
+                Cari
               </Button>
             </Col>
           </Row>
 
-          <Table
-            columns={columns}
-            dataSource={data?.data}
-            rowKey="id"
-            loading={isLoading}
-            pagination={{
-              current: Number(page),
-              total: data?.total,
-              pageSize: 10,
-              showSizeChanger: false,
-            }}
-            onChange={handleTableChange}
+          <Tabs
+            activeKey={activeTab}
+            onChange={setActiveTab}
+            items={[
+              {
+                key: "transactions",
+                label: "Riwayat Pembayaran",
+                children: (
+                  <Table
+                    columns={columns}
+                    dataSource={data?.data}
+                    rowKey="id"
+                    loading={isLoading}
+                    pagination={{
+                      current: Number(page),
+                      total: data?.total,
+                      pageSize: 10,
+                      showSizeChanger: false,
+                    }}
+                    onChange={handleTableChange}
+                  />
+                ),
+              },
+              {
+                key: "inquiries",
+                label: "Riwayat Inquiry",
+                children: (
+                  <Table
+                    columns={inquiryColumns}
+                    dataSource={inquiryData?.data}
+                    rowKey="id"
+                    loading={isLoadingInquiry}
+                    pagination={{
+                      current: Number(page),
+                      total: inquiryData?.total,
+                      pageSize: 10,
+                      showSizeChanger: false,
+                    }}
+                    onChange={handleTableChange}
+                  />
+                ),
+              },
+            ]}
           />
         </Card>
       </div>

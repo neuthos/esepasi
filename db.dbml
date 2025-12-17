@@ -108,3 +108,33 @@ Ref: bills.student_id > students.id [delete: cascade]
 Ref: bills.created_by > users.id
 Ref: bills.cancelled_by > users.id
 Ref: payments.bill_id > bills.id [delete: cascade]
+
+Table inquiries {
+  id uuid [pk]
+  student_id uuid [not null]
+  code varchar(50) [not null, note: 'Unique inquiry code']
+  total_amount decimal(15,2) [not null]
+  status varchar(20) [not null, default: 'pending', note: 'pending | paid | expired | cancelled']
+  expired_at timestamp [not null]
+  created_at timestamp [not null, default: `now()`]
+  
+  indexes {
+    code [unique]
+    (student_id, status) [name: 'idx_inquiries_student_status']
+  }
+}
+
+Table inquiry_items {
+  id uuid [pk]
+  inquiry_id uuid [not null]
+  bill_id uuid [not null]
+  amount decimal(15,2) [not null, note: 'Snapshot amount at inquiry time']
+  
+  indexes {
+    inquiry_id [name: 'idx_inquiry_items_inquiry']
+  }
+}
+
+Ref: inquiries.student_id > students.id [delete: cascade]
+Ref: inquiry_items.inquiry_id > inquiries.id [delete: cascade]
+Ref: inquiry_items.bill_id > bills.id [delete: cascade]

@@ -133,7 +133,7 @@ export default function AdminUsersPage() {
       key: "name",
       render: (text, record) => (
         <Space>
-          <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold">
+          <div className="w-8 h-8 rounded-full flex items-center justify-center text-blue-600 font-bold">
             {text.charAt(0).toUpperCase()}
           </div>
           <div>

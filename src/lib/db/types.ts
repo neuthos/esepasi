@@ -59,6 +59,9 @@ export interface BillTable {
   created_by: string;
   created_at: Generated<Date>;
   updated_at: Generated<Date>;
+  deleted_at: Date | null;
+  deleted_by: string | null;
+  updated_by: string | null;
 }
 
 export interface PaymentTable {
@@ -70,6 +73,7 @@ export interface PaymentTable {
   payment_reference_number: string | null;
   notes: string | null;
   created_at: Generated<Date>;
+  inquiry_id: string | null;
 }
 
 // Database interface for Kysely
@@ -79,4 +83,23 @@ export interface Database {
   students: StudentTable;
   bills: BillTable;
   payments: PaymentTable;
+  inquiries: InquiryTable;
+  inquiry_items: InquiryItemTable;
+}
+
+export interface InquiryTable {
+  id: Generated<string>;
+  student_id: string;
+  code: string;
+  total_amount: string; // decimal
+  status: Generated<"pending" | "paid" | "expired" | "cancelled">;
+  expired_at: Date;
+  created_at: Generated<Date>;
+}
+
+export interface InquiryItemTable {
+  id: Generated<string>;
+  inquiry_id: string;
+  bill_id: string;
+  amount: string; // decimal
 }
