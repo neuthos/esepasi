@@ -48,3 +48,23 @@ export const methodNotAllowed = (
     )}`,
   });
 };
+
+/**
+ * Helper to check service key for external APIs
+ */
+export const checkServiceKey = (req: NextApiRequest) => {
+  const secretKey = process.env.EXTERNAL_SERVICE_KEY;
+  const clientKey = req.headers["x-service-key"];
+
+  return secretKey && secretKey === clientKey;
+};
+
+/**
+ * Helper to return 401 Unauthorized
+ */
+export const unauthorized = (res: NextApiResponse) => {
+  res.status(401).json({
+    success: false,
+    message: "Unauthorized access",
+  });
+};

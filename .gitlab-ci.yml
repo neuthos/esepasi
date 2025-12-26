@@ -1,0 +1,53 @@
+# E-Wallet Frontend GitLab CI/CD Pipeline
+# Build Docker image only - Deploy manually via Swarmpit UI
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: "/certs"
+
+stages:
+  - build
+
+# Build and push Docker image to GitLab Registry
+docker-build:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - echo "Building Docker image for E-Wallet Frontend"
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - |
+      # Determine tag based on branch
+      if [[ "$CI_COMMIT_BRANCH" == "$CI_DEFAULT_BRANCH" ]]; then
+        tag="latest"
+        echo "Running on default branch '$CI_DEFAULT_BRANCH': tag = 'latest'"
+      else
+        tag="$CI_COMMIT_REF_SLUG"
+        echo "Running on branch '$CI_COMMIT_BRANCH': tag = $tag"
+      fi
+    - |
+      # Build Docker image
+      # Environment variables like NEXT_PUBLIC_CDN_URL can be passed as build args if needed:
+      # --build-arg NEXT_PUBLIC_CDN_URL=$NEXT_PUBLIC_CDN_URL
+      docker build --pull -t "$CI_REGISTRY_IMAGE:$tag" -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA" .
+    - |
+      # Push both tags
+      docker push "$CI_REGISTRY_IMAGE:$tag"
+      docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+    - |
+      # Show image info
+      echo "✅ Docker images pushed successfully:"
+      echo "   Latest: $CI_REGISTRY_IMAGE:$tag"  
+      echo "   Commit: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA"
+      echo ""
+      echo "🚀 Deploy manually in Swarmpit using image:"
+      echo "   $CI_REGISTRY_IMAGE:$tag"
+  after_script:
+    - docker system prune -f
+  only:
+    - main
+    - develop
+    - tags
+    - branches

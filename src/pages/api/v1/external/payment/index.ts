@@ -1,8 +1,16 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import {apiHandler, methodNotAllowed} from "@/lib/utils/apiHandler";
+import {
+  apiHandler,
+  methodNotAllowed,
+  checkServiceKey,
+  unauthorized,
+} from "@/lib/utils/apiHandler";
 import {transactionService} from "@/modules/transaction/transaction.service";
 
 export default apiHandler(async (req, res) => {
+  if (!checkServiceKey(req)) {
+    return unauthorized(res);
+  }
+
   if (req.method === "POST") {
     const payload = req.body;
 
